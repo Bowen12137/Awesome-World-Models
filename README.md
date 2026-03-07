@@ -9,6 +9,8 @@
 
 **The Most Comprehensive Collection of World Models Research**
 
+**Awesome Generative World Models: Video, 3D, Robotics & Driving**
+
 *Spanning Video Generation, 3D/4D Modeling, Autonomous Driving, Embodied AI, and Beyond*
 
 
