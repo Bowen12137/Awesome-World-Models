@@ -13,8 +13,11 @@
 
 *Spanning Video Generation, 3D/4D Modeling, Autonomous Driving, Embodied AI, and Beyond*
 
-
 </div>
+
+> **Not just a paper list.** Curated by [Bowen Jing](https://github.com/Bowen12137), an active researcher in generative world models at Tsinghua AIR and Tuojing Intelligence — with annotations on papers that actually moved the needle. ⭐ marks are editorial judgements, not citation counts.
+
+
 
 ## 🌳 World Models Evolutionary Tree
 
