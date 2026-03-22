@@ -3,7 +3,7 @@
 # 🌍 Awesome World Models
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-![Papers](https://img.shields.io/badge/papers-690-blue)
+![Papers](https://img.shields.io/badge/papers-489-blue)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
@@ -134,13 +134,13 @@ Comprehensive surveys and review papers on world models:
 |-------|-------|-----------|
 | ⭐ **The Role of World Models in Shaping Autonomous Driving: A Comprehensive Survey** | `arXiv 25.02` | [![arXiv](https://img.shields.io/badge/arXiv-2502.10498-b31b1b.svg)](https://arxiv.org/abs/2502.10498) |
 | **Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI** | `TMECH 25` | [![arXiv](https://img.shields.io/badge/arXiv-2407.06886-b31b1b.svg)](https://arxiv.org/abs/2407.06886) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/HCPLab-SYSU/Embodied_AI_Paper_List) |
-| **3D and 4D World Modeling: A Survey** | `arXiv 25.09` | [![arXiv](https://img.shields.io/badge/arXiv-2509.07996-b31b1b.svg)](https://arxiv.org/abs/2509.07996) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/worldbench/survey) |
-| **A Comprehensive Survey on World Models for Embodied AI** | `arXiv 25.10` | [![arXiv](https://img.shields.io/badge/arXiv-2510.16732-b31b1b.svg)](https://arxiv.org/abs/2510.16732) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://github.com/Li-Zn-H/AwesomeWorldModels) |
+| **3D and 4D World Modeling: A Survey** | `arXiv 25.09` | [![arXiv](https://img.shields.io/badge/arXiv-2509.07996-b31b1b.svg)](https://arxiv.org/abs/2509.07996) |
+| **A Comprehensive Survey on World Models for Embodied AI** | `arXiv 25.10` | [![arXiv](https://img.shields.io/badge/arXiv-2510.16732-b31b1b.svg)](https://arxiv.org/abs/2510.16732) |
 | **A Step Toward World Models: A Survey on Robotic Manipulation** | `arXiv 25.11` | [![arXiv](https://img.shields.io/badge/arXiv-2511.02097-b31b1b.svg)](https://arxiv.org/abs/2511.02097) |
 | **A Survey of Embodied World Models** | `25.09` | [![Paper](https://img.shields.io/badge/Paper-Link-blue)](https://www.researchgate.net/publication/395713824_A_Survey_of_Embodied_World_Models) |
 | **A Survey on Future Physical World Generation for Autonomous Driving** | `MMAsia 25` | [![Paper](https://img.shields.io/badge/Paper-Link-blue)](https://dl.acm.org/doi/full/10.1145/3769748.3773345) |
 | **The Safety Challenge of World Models for Embodied AI Agents: A Review** | `arXiv 25.10` | [![arXiv](https://img.shields.io/badge/arXiv-2510.05865-b31b1b.svg)](https://arxiv.org/abs/2510.05865) |
-| **Progressive Robustness-Aware World Models in Autonomous Driving: A Review and Outlook** | `techrXiv 25.11` | [![Paper](https://img.shields.io/badge/Paper-Link-blue)](https://doi.org/10.36227/techrxiv.176523308.84756413/v1) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://github.com/MoyangSensei/AwesomeRobustDWM) |
+| **Progressive Robustness-Aware World Models in Autonomous Driving: A Review and Outlook** | `techrXiv 25.11` | [![Paper](https://img.shields.io/badge/Paper-Link-blue)](https://doi.org/10.36227/techrxiv.176523308.84756413/v1) |
 | ⭐ **A Path Towards Autonomous Machine Intelligence** (Yann LeCun) | `OpenReview` | [![OpenReview](https://img.shields.io/badge/OpenReview-Paper-8E44AD.svg)](https://openreview.net/pdf?id=BZ5a1r-kVsf) [![Video](https://img.shields.io/badge/Video-YouTube-red)](https://www.youtube.com/watch?v=OKkEdTchsiE) |
 
 > 📖 For complete list of surveys, see [docs/research/surveys.md](docs/research/surveys.md)
@@ -253,7 +253,6 @@ Video-based world models generate future frames in pixel space, leveraging power
 | **LatentDriver** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2409.15730-b31b1b.svg)](https://arxiv.org/abs/2409.15730) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/Sephirex-X/LatentDriver) |
 | **MagicDrive3D** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2405.14475-b31b1b.svg)](https://arxiv.org/abs/2405.14475) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://gaoruiyuan.com/magicdrive3d/) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://gaoruiyuan.com/magicdrive3d/) |
 | **MoVieDrive** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2508.14327-b31b1b.svg)](https://arxiv.org/abs/2508.14327) |
-| **Progressive Robustness-Aware World Models in Autonomous Driving: A Survey** | `-` | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/MoyangSensei/AwesomeRobustDWM) |
 | **Think Before You Drive** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2512.03454-b31b1b.svg)](https://arxiv.org/abs/2512.03454) |
 | **Think2Drive** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2402.16720-b31b1b.svg)](https://arxiv.org/abs/2402.16720) |
 | **TrafficBots** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2303.04116-b31b1b.svg)](https://arxiv.org/abs/2303.04116) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/zhejz/TrafficBots) |
@@ -292,7 +291,7 @@ World models for manipulation, navigation, and interaction in physical environme
 | ⭐ **General agents Contain World Models** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2506.01622-b31b1b.svg)](https://arxiv.org/abs/2506.01622) |
 | ⭐ **Persistent Embodied World Models** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2505.05495-b31b1b.svg)](https://arxiv.org/abs/2505.05495) |
 | ⭐ **Self-Improving Embodied Foundation Models** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2509.15155-b31b1b.svg)](https://arxiv.org/abs/2509.15155) |
-| ⭐ **World Models for Embodied AI** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2510.16732-b31b1b.svg)](https://arxiv.org/abs/2510.16732) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://github.com/Li-Zn-H/AwesomeWorldModels) |
+| ⭐ **World Models for Embodied AI** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2510.16732-b31b1b.svg)](https://arxiv.org/abs/2510.16732) |
 | **Workshop on Embodied World Models for Decision Making** | `IPS 2025` | - |
 | **EmbodieDreamer** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2507.05198-b31b1b.svg)](https://arxiv.org/pdf/2507.05198) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/GigaAI-research/EmbodieDreamer) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://embodiedreamer.github.io/) |
 | **Embodied AI Agents: Modeling the World** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2506.22355-b31b1b.svg)](https://arxiv.org/abs/2506.22355) |
@@ -682,9 +681,9 @@ If you find this repository useful, please consider citing:
 ```bibtex
 @misc{awesome-world-models-2026,
   title={Awesome World Models: A Comprehensive Collection},
-  author={World Models Community},
+  author={Jing, Bowen},
   year={2026},
-  howpublished={\url{https://github.com/awesome-world-models}}
+  howpublished={\url{https://github.com/Bowen12137/Awesome-World-Models}}
 }
 ```
 
@@ -692,7 +691,7 @@ If you find this repository useful, please consider citing:
 
 ## ⭐ Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=awesome-world-models/awesome-world-models-unified&type=Date)](https://star-history.com/#awesome-world-models/awesome-world-models-unified&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Bowen12137/Awesome-World-Models&type=Date)](https://star-history.com/#Bowen12137/Awesome-World-Models&Date)
 
 ---
 
