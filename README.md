@@ -286,6 +286,7 @@ World models for manipulation, navigation, and interaction in physical environme
 
 | Paper | Venue | Resources |
 |-------|-------|-----------|
+| **Hand2World: Autoregressive Egocentric Interaction Generation via Free-Space Hand Gestures** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2602.09600-b31b1b.svg)](https://arxiv.org/abs/2602.09600) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://hand2world.github.io/) |
 | **GaussTwin: Unified Simulation and Correction with Gaussian Splatting for Robotic Digital Twins** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2603.05108-b31b1b.svg)](https://arxiv.org/abs/2603.05108) |
 | ⭐ **"Learning Primitive Embodied World Models: Towards Scalable Robotic Learning"** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2508.20840-b31b1b.svg)](https://arxiv.org/pdf/2508.20840) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://qiaosun22.github.io/PrimitiveWorld/) |
 | ⭐ **Agent Learning via Early Experience** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2510.08558-b31b1b.svg)](https://arxiv.org/pdf/2510.08558) |
