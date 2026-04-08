@@ -1,248 +1,158 @@
-# Tutorials & Code Implementations
+# Tutorials & Courses for World Models
 
-Hands-on tutorials, code examples, and implementation guides for world models.
+A beginner-friendly learning guide for people who are new to world models and want a clear path into the field.
 
----
-
-## 🚀 Getting Started
-
-### Beginner Tutorials
-
-| Title | Topic | Framework | Resources |
-|-------|-------|-----------|-----------|
-| **World Models from Scratch** | Introduction | PyTorch | [![Website](https://img.shields.io/badge/Website-Link-blue)](https://worldmodels.github.io/) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/ctallec/world-models) |
-| **Building Your First World Model** | Basics | TensorFlow | [![Tutorial](https://img.shields.io/badge/Tutorial-Link-orange)](https://www.tensorflow.org/tutorials) |
-| **Introduction to Model-Based RL** | RL Fundamentals | PyTorch | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/openai/spinningup) |
+If you do not know where to start, begin with the **Beginner Journey** below instead of jumping straight into papers or large codebases.
 
 ---
 
-## 💻 Implementation Guides
+## 🌱 Who This Page Is For
 
-### DreamerV3
+This page is for readers who want to answer four questions quickly:
 
-| Resource | Description | Framework | Link |
-|----------|-------------|-----------|------|
-| **Official Implementation** | Complete DreamerV3 codebase | JAX | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/danijar/dreamerv3) |
-| **PyTorch Implementation** | Community PyTorch port | PyTorch | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/NM512/dreamerv3-torch) |
-| **Tutorial: Implementing DreamerV3** | Step-by-step guide | PyTorch | [![Blog](https://img.shields.io/badge/Blog-Link-orange)](https://danijar.com/project/dreamerv3/) |
+1. **What is a world model?**
+2. **What should I read or watch first?**
+3. **What should I implement first?**
+4. **Which direction should I go next: RL, driving, or robotics?**
 
-### Autonomous Driving Models
-
-| Resource | Description | Framework | Link |
-|----------|-------------|-----------|------|
-| **DriveDreamer Implementation** | Video generation for driving | PyTorch | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/JeffWang987/DriveDreamer) |
-| **OccWorld Tutorial** | Occupancy world models | PyTorch | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/wzzheng/OccWorld) |
-| **GAIA-1 Explained** | Understanding GAIA architecture | - | [![Blog](https://img.shields.io/badge/Blog-Link-orange)](https://wayve.ai/thinking/gaia1/) |
-| **nuScenes World Model Baseline** | Training on nuScenes | PyTorch | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/nuscenes/nuscenes-devkit) |
-
-### Embodied AI
-
-| Resource | Description | Framework | Link |
-|----------|-------------|-----------|------|
-| **CALVIN Baseline** | Language-conditioned manipulation | PyTorch | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/mees/calvin) |
-| **Habitat Tutorial** | Navigation in 3D environments | PyTorch | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/facebookresearch/habitat-lab) |
-| **RoboNet Training** | Multi-robot learning | TensorFlow | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/SudeepDasari/RoboNet) |
+The goal is not to list everything. The goal is to give you a safe, high-signal path into the area.
 
 ---
 
-## 📖 Step-by-Step Tutorials
+## 🚀 Beginner Journey
 
-### Video Generation for World Models
+### Stage 1 — Build intuition
 
-```python
-# Tutorial: Training a video prediction model
-# Framework: PyTorch
+**Goal:** understand what a world model is and why it matters.
 
-import torch
-import torch.nn as nn
+| Resource | Why start here? | Format | Resources |
+|----------|------------------|--------|-----------|
+| **World Models (Ha & Schmidhuber)** | Classic conceptual starting point for latent dynamics, imagination, and agent learning | Tutorial + paper/code | [![Website](https://img.shields.io/badge/Website-Link-blue)](https://worldmodels.github.io/) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/ctallec/world-models) |
+| **A Path Towards Autonomous Machine Intelligence** | Big-picture framing for why predictive world models matter | Talk + paper | [![Video](https://img.shields.io/badge/Video-YouTube-red)](https://www.youtube.com/watch?v=OKkEdTchsiE) [![Paper](https://img.shields.io/badge/Paper-OpenReview-8E44AD.svg)](https://openreview.net/pdf?id=BZ5a1r-kVsf) |
 
-class VideoWorldModel(nn.Module):
-    def __init__(self, latent_dim=256):
-        super().__init__()
-        self.encoder = Encoder(latent_dim)
-        self.dynamics = DynamicsModel(latent_dim)
-        self.decoder = Decoder(latent_dim)
+**You should leave this stage able to explain:** latent state, prediction, imagination, and why world models help planning or control.
 
-    def forward(self, observations, actions):
-        # Encode observations
-        latents = self.encoder(observations)
-        # Predict next latent
-        next_latent = self.dynamics(latents, actions)
-        # Decode to image
-        prediction = self.decoder(next_latent)
-        return prediction
-```
+### Stage 2 — Learn the core loop
 
-[![Full Tutorial](https://img.shields.io/badge/Tutorial-GitHub-green)](https://github.com/world-models/video-prediction)
+**Goal:** understand the standard world-model pipeline used in modern model-based RL and many embodied systems.
 
-### Occupancy Prediction
+| Resource | What you learn | Format | Resources |
+|----------|----------------|--------|-----------|
+| **CS285: Deep Reinforcement Learning** | Model-based RL foundations behind modern world-model agents | Course | [![Website](https://img.shields.io/badge/Website-Link-blue)](http://rail.eecs.berkeley.edu/deeprlcourse/) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/berkeleydeeprlcourse/homework_fall2023) |
+| **DreamerV3** | A strong reference line for encoder + dynamics + value/policy training | Project + code | [![Website](https://img.shields.io/badge/Website-Link-blue)](https://danijar.com/project/dreamerv3/) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/danijar/dreamerv3) |
 
-```python
-# Tutorial: 3D Occupancy Prediction
-# Framework: PyTorch
+**You should leave this stage able to identify:** encoder, latent dynamics, rollout, reconstruction/prediction losses, and how planning/policy learning connects to prediction.
 
-class OccupancyWorldModel(nn.Module):
-    def __init__(self, voxel_size=0.4):
-        super().__init__()
-        self.voxel_size = voxel_size
-        self.backbone = ResNet50()
-        self.occ_head = OccupancyHead()
+### Stage 3 — Try one hands-on starting point
 
-    def forward(self, images, intrinsics, extrinsics):
-        # Extract features
-        features = self.backbone(images)
-        # Predict occupancy
-        occupancy = self.occ_head(features, intrinsics, extrinsics)
-        return occupancy
-```
+**Goal:** learn one complete workflow before touching large domain-specific systems.
 
-[![Full Tutorial](https://img.shields.io/badge/Tutorial-GitHub-green)](https://github.com/occupancy-prediction/tutorial)
+| Starting Point | Best for | Why it is a good first project | Resources |
+|----------------|----------|-------------------------------|-----------|
+| **World Models from Scratch** | Absolute beginners | Small, self-contained, historically important | [![Website](https://img.shields.io/badge/Website-Link-blue)](https://worldmodels.github.io/) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/ctallec/world-models) |
+| **DreamerV3 official implementation** | Readers comfortable with RL code | Modern reference implementation used throughout the area | [![Website](https://img.shields.io/badge/Website-Link-blue)](https://danijar.com/project/dreamerv3/) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/danijar/dreamerv3) |
+| **DreamerV3 PyTorch port** | PyTorch-first learners | Easier if you want the same ideas in a more familiar framework | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/NM512/dreamerv3-torch) |
+
+**Recommendation:** if you are new, start here before trying driving stacks or large robotics training pipelines.
+
+### Stage 4 — Choose a specialization
+
+Once you understand the basic loop, pick one track.
+
+| Track | Start with | Then move to |
+|------|------------|--------------|
+| **General / Model-Based RL** | DreamerV3 + CS285 | compare latent-state world models and policy-centric systems |
+| **Autonomous Driving** | CARLA + driving world-model papers | occupancy/video generation, planning benchmarks, closed-loop evaluation |
+| **Embodied AI / Robotics** | CALVIN / LIBERO ecosystem | manipulation, VLA/WAM systems, sim-to-real evaluation |
 
 ---
 
-## 🎓 Course Materials
+## 🧭 Learning Paths by Goal
 
-### Online Courses with Code
+### I want conceptual understanding first
+Follow this order:
+1. World Models project page
+2. Yann LeCun's AMI talk/paper
+3. DreamerV3 overview
+4. Then choose a domain track
 
-| Course | Institution | Code Available | Resources |
-|--------|-------------|----------------|-----------|
-| **CS285: Deep RL** | UC Berkeley | ✅ | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/berkeleydeeprlcourse/homework_fall2023) [![Website](https://img.shields.io/badge/Website-Link-blue)](http://rail.eecs.berkeley.edu/deeprlcourse/) |
-| **CS330: Meta Learning** | Stanford | ✅ | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/cs330-stanford) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://cs330.stanford.edu/) |
-| **6.S898: Deep Learning** | MIT | ✅ | [![Website](https://img.shields.io/badge/Website-Link-blue)](https://phillipi.github.io/6.s898/) |
+### I want to implement something first
+Follow this order:
+1. World Models from Scratch
+2. DreamerV3 official implementation
+3. DreamerV3 PyTorch port
+4. Then inspect one domain-specific codebase
 
-### Jupyter Notebooks
+### I care about autonomous driving
+Start here:
+- **CARLA** for simulation-based experimentation [![Website](https://img.shields.io/badge/Website-Link-blue)](https://carla.readthedocs.io/)
+- **DriveDreamer** for a representative driving world-model codebase [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/JeffWang987/DriveDreamer)
+- then move to datasets and benchmarks in [docs/resources/datasets.md](../resources/datasets.md) and [docs/resources/benchmarks.md](../resources/benchmarks.md)
 
-| Title | Topic | Resources |
-|-------|-------|-----------|
-| **World Models Interactive Demo** | Visualization | [![Colab](https://img.shields.io/badge/Colab-Notebook-orange)](https://colab.research.google.com/) |
-| **Training DreamerV2 on Atari** | Game AI | [![Colab](https://img.shields.io/badge/Colab-Notebook-orange)](https://colab.research.google.com/) |
-| **Occupancy Prediction Demo** | Autonomous Driving | [![Colab](https://img.shields.io/badge/Colab-Notebook-orange)](https://colab.research.google.com/) |
-
----
-
-## 🛠️ Tools & Libraries
-
-### Core Libraries
-
-| Library | Description | Language | Resources |
-|---------|-------------|----------|-----------|
-| **Stable Baselines3** | RL algorithms including world models | Python | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/DLR-RM/stable-baselines3) [![Docs](https://img.shields.io/badge/Docs-Link-blue)](https://stable-baselines3.readthedocs.io/) |
-| **TorchRL** | PyTorch RL library | Python | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/pytorch/rl) |
-| **Gymnasium** | RL environment standard | Python | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/Farama-Foundation/Gymnasium) |
-
-### Simulation Environments
-
-| Environment | Use Case | Resources |
-|-------------|----------|-----------|
-| **CARLA** | Autonomous driving simulation | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/carla-simulator/carla) [![Docs](https://img.shields.io/badge/Docs-Link-blue)](https://carla.readthedocs.io/) |
-| **Isaac Sim** | Robotics simulation | [![Website](https://img.shields.io/badge/Website-Link-blue)](https://developer.nvidia.com/isaac-sim) |
-| **MuJoCo** | Physics simulation | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/deepmind/mujoco) |
-| **Habitat** | Indoor navigation | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/facebookresearch/habitat-lab) |
+### I care about robotics / embodied AI
+Start here:
+- **CALVIN** for language-conditioned manipulation [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/mees/calvin)
+- **LIBERO** for evaluation and transfer in robot learning [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/Lifelong-Robot-Learning/LIBERO)
+- then move to embodied world-model papers and WAM/VLA systems in the main README
 
 ---
 
-## 📝 Blog Posts & Articles
+## 📚 Curated Resources by Difficulty
 
-### Technical Deep Dives
+### Beginner
+- **World Models** — the best first conceptual entry point
+- **A Path Towards Autonomous Machine Intelligence** — big-picture motivation
+- **CS285 model-based RL material** — background for the standard learning loop
 
-| Title | Author | Topic | Link |
-|-------|--------|-------|------|
-| **World Models Explained** | David Ha | Introduction | [![Blog](https://img.shields.io/badge/Blog-Link-orange)](https://worldmodels.github.io/) |
-| **How Tesla's FSD Uses World Models** | Various | Autonomous Driving | [![Blog](https://img.shields.io/badge/Blog-Link-orange)](https://www.tesla.com/AI) |
-| **Building Occupancy Networks** | Waymo Research | 3D Perception | [![Blog](https://img.shields.io/badge/Blog-Link-orange)](https://blog.waymo.com/) |
-| **DreamerV3: Mastering Atari with World Models** | Danijar Hafner | Model-Based RL | [![Blog](https://img.shields.io/badge/Blog-Link-orange)](https://danijar.com/project/dreamerv3/) |
+### Intermediate
+- **DreamerV3** — modern reference implementation
+- **DriveDreamer** — domain-specific world-model system for driving
+- **CALVIN** — practical embodied benchmark/codebase for manipulation
 
-### Implementation Guides
-
-| Title | Framework | Difficulty | Link |
-|-------|-----------|------------|------|
-| **Implementing World Models in PyTorch** | PyTorch | Intermediate | [![Blog](https://img.shields.io/badge/Blog-Link-orange)](https://towardsdatascience.com/) |
-| **Video Prediction with Diffusion Models** | PyTorch | Advanced | [![Blog](https://img.shields.io/badge/Blog-Link-orange)](https://huggingface.co/blog) |
-| **Training on nuScenes Dataset** | PyTorch | Intermediate | [![Blog](https://img.shields.io/badge/Blog-Link-orange)](https://medium.com/) |
+### Advanced
+- large-scale driving benchmarks and closed-loop evaluation
+- embodied VLA/WAM systems
+- multi-domain or foundation-model world models
 
 ---
 
-## 🎯 Project Ideas
+## 🛠️ Hands-On Starting Points
 
-### Beginner Projects
-
-1. **Atari World Model** - Train a world model on Atari games
-   - Dataset: Atari 2600
-   - Framework: PyTorch
-   - Difficulty: ⭐⭐
-
-2. **Simple Video Prediction** - Predict next frame in videos
-   - Dataset: Moving MNIST
-   - Framework: TensorFlow/PyTorch
-   - Difficulty: ⭐⭐
-
-### Intermediate Projects
-
-3. **Driving Scene Prediction** - Predict future driving scenes
-   - Dataset: nuScenes
-   - Framework: PyTorch
-   - Difficulty: ⭐⭐⭐
-
-4. **Robot Manipulation** - World model for pick-and-place
-   - Dataset: CALVIN
-   - Framework: PyTorch
-   - Difficulty: ⭐⭐⭐
-
-### Advanced Projects
-
-5. **Multi-Modal World Model** - Combine camera + LiDAR
-   - Dataset: Waymo Open
-   - Framework: PyTorch
-   - Difficulty: ⭐⭐⭐⭐
-
-6. **Language-Conditioned World Model** - Text-to-simulation
-   - Dataset: Custom
-   - Framework: PyTorch
-   - Difficulty: ⭐⭐⭐⭐⭐
+| Resource | Domain | Why it matters | Resources |
+|----------|--------|----------------|-----------|
+| **DreamerV3** | General / RL | canonical modern world-model training loop | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/danijar/dreamerv3) |
+| **DriveDreamer** | Driving | representative video world-model system | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/JeffWang987/DriveDreamer) |
+| **CALVIN** | Robotics | practical manipulation benchmark and baseline | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/mees/calvin) |
+| **Habitat Lab** | Navigation | good entry point for embodied navigation environments | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/facebookresearch/habitat-lab) |
 
 ---
 
-## 🔗 Community Resources
+## ⚠️ What to Skip at First
 
-### GitHub Repositories
+If you are completely new, do **not** start with:
 
-- **[Awesome World Models](https://github.com/awesome-world-models)** - Curated list of resources
-- **[World Models Papers](https://github.com/world-models/papers)** - Paper implementations
-- **[Autonomous Driving Models](https://github.com/autonomousvision)** - AD-specific models
+- giant autonomous-driving stacks with many moving parts
+- occupancy forecasting papers without first understanding the basic world-model loop
+- highly specialized robotics post-training systems
+- benchmark tables without intuition for what is actually being measured
 
-### Forums & Discussion
-
-- **[r/MachineLearning](https://www.reddit.com/r/MachineLearning/)** - Reddit community
-- **[Hugging Face Forums](https://discuss.huggingface.co/)** - Model discussions
-- **[Papers with Code](https://paperswithcode.com/)** - Code + benchmarks
-
----
-
-## 📚 Recommended Reading Order
-
-### For Beginners
-1. Read: [World Models paper](https://worldmodels.github.io/)
-2. Watch: [Two Minute Papers explanation](https://www.youtube.com/watch?v=HzA8LRqhujk)
-3. Code: Implement simple video prediction
-4. Practice: Train on Atari games
-
-### For Intermediate
-1. Read: DreamerV3 paper
-2. Watch: Sergey Levine's CS285 lectures
-3. Code: Implement DreamerV3
-4. Practice: Train on robotics tasks
-
-### For Advanced
-1. Read: Latest CVPR/NeurIPS papers
-2. Watch: Industry talks (Tesla, Wayve, NVIDIA)
-3. Code: Multi-modal world models
-4. Practice: Contribute to open-source projects
+A much better order is:
+1. concept
+2. core loop
+3. one small implementation
+4. one domain track
 
 ---
 
-**Last Updated**: March 6, 2026
+## 🔗 Next Steps
 
-Sources:
-- [Hugging Face Hub](https://huggingface.co/blog/searching-the-hub)
-- [NVIDIA Cosmos](https://www.nvidia.com/en-us/ai/cosmos/)
-- [GitHub Trending](https://github.com/trending/developers)
+Once you finish the beginner path:
+
+- see [talks.md](talks.md) for broader talks and keynote material
+- see [../resources/datasets.md](../resources/datasets.md) for datasets by domain
+- see [../resources/benchmarks.md](../resources/benchmarks.md) for evaluation suites and metrics
+- see [../research/taxonomy.md](../research/taxonomy.md) to understand how the field is organized in this repository
+
+---
+
+**Last Updated**: April 2026

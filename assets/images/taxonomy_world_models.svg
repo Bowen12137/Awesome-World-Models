@@ -1,0 +1,490 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="920" viewBox="0 0 1400 920" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+
+<defs>
+  <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+    <path d="M1 1L9 5L1 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <style>
+    .root-box { fill: #EEEEF4; stroke: #9999B3; stroke-width: 1.2; }
+    .ad-dom { fill: #E6F1FB; stroke: #6DAAD4; stroke-width: 1; }
+    .ad-ax  { fill: #F0F6FC; stroke: #A3C8E8; stroke-width: 0.8; }
+    .ad-sf  { fill: #F8FBFE; stroke: #BFDAEF; stroke-width: 0.6; }
+    .ad-pa  { fill: #FFFFFF; stroke: #D0E4F2; stroke-width: 0.5; }
+    .ma-dom { fill: #E6F3ED; stroke: #5DBFA0; stroke-width: 1; }
+    .ma-ax  { fill: #EEF7F2; stroke: #98D4BA; stroke-width: 0.8; }
+    .ma-sf  { fill: #F5FAF7; stroke: #B8E2CE; stroke-width: 0.6; }
+    .ma-pa  { fill: #FFFFFF; stroke: #C8E8D8; stroke-width: 0.5; }
+    .em-dom { fill: #FAF0E4; stroke: #D4A050; stroke-width: 1; }
+    .em-ax  { fill: #FDF5EC; stroke: #E0C090; stroke-width: 0.8; }
+    .em-sf  { fill: #FEFAF4; stroke: #E8D0AA; stroke-width: 0.6; }
+    .em-pa  { fill: #FFFFFF; stroke: #EEDCC0; stroke-width: 0.5; }
+    .wk { fill: #F5F5F5; stroke: #D0D0D0; stroke-width: 0.4; }
+    .ch { fill: none; stroke-dasharray: 3.5 2.5; stroke-width: 0.7; }
+    .ch-ad { stroke: #6DAAD4; }
+    .ch-ma { stroke: #5DBFA0; }
+    .ch-em { stroke: #D4A050; }
+    
+    .t-root { font-size: 16px; font-weight: 600; fill: #3C3C5A; }
+    .t-dom  { font-size: 13px; font-weight: 600; }
+    .t-ax   { font-size: 11.5px; font-weight: 600; }
+    .t-sf   { font-size: 10px; font-weight: 500; }
+    .t-pa   { font-size: 9.5px; font-weight: 400; fill: #555; }
+    .t-wk   { font-size: 8.5px; font-weight: 400; fill: #888; font-family: 'Courier New', monospace; }
+    .t-ch   { font-size: 9px; font-weight: 400; font-style: italic; }
+    .t-ann  { font-size: 9px; font-weight: 400; fill: #666; }
+    .t-ann-b { font-size: 9.5px; font-weight: 600; fill: #333; }
+    .t-flow { font-size: 10px; font-weight: 500; fill: #5C4C6A; }
+    .t-flow-s { font-size: 9px; font-weight: 400; fill: #888; }
+    .t-neq  { font-size: 10px; font-weight: 700; fill: #C44; font-family: 'Courier New', monospace; }
+    .t-legend { font-size: 8.5px; fill: #777; }
+    .t-xlink { font-size: 7.5px; fill: #8070A0; font-style: italic; }
+    
+    .t-ad { fill: #185FA5; }
+    .t-ma { fill: #0F6E56; }
+    .t-em { fill: #7A5510; }
+    
+    .line-root { stroke: #AAAABB; stroke-width: 1; }
+    .line-dom-ad { stroke: #6DAAD4; stroke-width: 0.8; }
+    .line-ax-ad  { stroke: #A3C8E8; stroke-width: 0.6; }
+    .line-sf-ad  { stroke: #BFDAEF; stroke-width: 0.5; }
+    .line-dom-ma { stroke: #5DBFA0; stroke-width: 0.8; }
+    .line-ax-ma  { stroke: #98D4BA; stroke-width: 0.6; }
+    .line-sf-ma  { stroke: #B8E2CE; stroke-width: 0.5; }
+    .line-dom-em { stroke: #D4A050; stroke-width: 0.8; }
+    .line-ax-em  { stroke: #E0C090; stroke-width: 0.6; }
+    .line-sf-em  { stroke: #E8D0AA; stroke-width: 0.5; }
+    
+    .xlink { stroke: #9080B0; stroke-width: 0.7; stroke-dasharray: 5 3; fill: none; opacity: 0.55; }
+    .xdot  { fill: #9080B0; opacity: 0.6; }
+  </style>
+</defs>
+
+<!-- ══════════════════════════════════════ -->
+<!-- Background (white) -->
+<!-- ══════════════════════════════════════ -->
+<rect width="1400" height="920" fill="#FAFAFA"/>
+
+<!-- ══════════════════════════════════════ -->
+<!-- ROOT NODE -->
+<!-- ══════════════════════════════════════ -->
+<rect class="root-box" x="400" y="20" width="600" height="34" rx="7"/>
+<text class="t-root" x="700" y="43" text-anchor="middle">A Unified Taxonomy of World Models and Embodied Agents</text>
+
+<!-- Root → 3 domains vertical drops -->
+<line class="line-root" x1="700" y1="54" x2="700" y2="64"/>
+<line class="line-root" x1="232" y1="64" x2="1168" y2="64"/>
+<line class="line-root" x1="232" y1="64" x2="232" y2="78"/>
+<line class="line-root" x1="700" y1="64" x2="700" y2="78"/>
+<line class="line-root" x1="1168" y1="64" x2="1168" y2="78"/>
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!-- DOMAIN 1: AUTONOMOUS DRIVING  (x: 18–446, blue)              -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+<rect class="ad-dom" x="104" y="78" width="256" height="28" rx="6"/>
+<text class="t-dom t-ad" x="232" y="97" text-anchor="middle">1 · Autonomous Driving World Models</text>
+
+<!-- Domain spine -->
+<line class="line-dom-ad" x1="232" y1="106" x2="232" y2="120"/>
+<line class="line-dom-ad" x1="120" y1="120" x2="380" y2="120"/>
+
+<!-- ── 1.1 Scene & World Representation ── -->
+<line class="line-dom-ad" x1="120" y1="120" x2="120" y2="132"/>
+<rect class="ad-ax" x="22" y="132" width="196" height="24" rx="5"/>
+<text class="t-ax t-ad" x="120" y="149" text-anchor="middle">1.1 Scene &amp; world representation</text>
+
+<line class="line-ax-ad" x1="120" y1="156" x2="120" y2="168"/>
+<line class="line-ax-ad" x1="50" y1="168" x2="208" y2="168"/>
+
+<!-- 1.1.1 -->
+<line class="line-ax-ad" x1="50" y1="168" x2="50" y2="178"/>
+<rect class="ad-sf" x="4" y="178" width="92" height="34" rx="4"/>
+<text class="t-sf t-ad" x="50" y="192" text-anchor="middle">2D image &amp;</text>
+<text class="t-sf t-ad" x="50" y="203" text-anchor="middle">video gen.</text>
+<text class="t-wk" x="50" y="222" text-anchor="middle">SimGen</text>
+
+<!-- 1.1.2 -->
+<line class="line-ax-ad" x1="120" y1="168" x2="120" y2="178"/>
+<rect class="ad-sf" x="74" y="178" width="92" height="34" rx="4"/>
+<text class="t-sf t-ad" x="120" y="192" text-anchor="middle">BEV scene</text>
+<text class="t-sf t-ad" x="120" y="203" text-anchor="middle">generation</text>
+
+<!-- 1.1.3 -->
+<line class="line-ax-ad" x1="180" y1="168" x2="180" y2="178"/>
+<rect class="ad-sf" x="134" y="178" width="92" height="34" rx="4"/>
+<text class="t-sf t-ad" x="180" y="192" text-anchor="middle">3D occupancy</text>
+<text class="t-sf t-ad" x="180" y="203" text-anchor="middle">&amp; geometry</text>
+<text class="t-wk" x="180" y="222" text-anchor="middle">HERMES</text>
+
+<!-- 1.1.4 (shifted right to avoid overlap with 1.1.3 works) -->
+<line class="line-ax-ad" x1="208" y1="168" x2="260" y2="168"/>
+<line class="line-ax-ad" x1="260" y1="168" x2="260" y2="178"/>
+<rect class="ad-sf" x="214" y="178" width="92" height="34" rx="4"/>
+<text class="t-sf t-ad" x="260" y="192" text-anchor="middle">LiDAR &amp; point</text>
+<text class="t-sf t-ad" x="260" y="203" text-anchor="middle">cloud</text>
+<text class="t-wk" x="260" y="222" text-anchor="middle">SPIRAL · AD-L-JEPA</text>
+
+<!-- Paradigm tags row under 1.1 -->
+<text class="t-pa" x="50" y="236" text-anchor="middle">Simulator-cond.</text>
+<text class="t-pa" x="120" y="236" text-anchor="middle">Spatiotemporal</text>
+<text class="t-pa" x="180" y="236" text-anchor="middle">4D forecasting</text>
+<text class="t-pa" x="260" y="236" text-anchor="middle">Self-supervised</text>
+
+<!-- ── 1.2 Planning & Control ── -->
+<line class="line-dom-ad" x1="232" y1="120" x2="232" y2="256"/>
+<rect class="ad-ax" x="140" y="256" width="184" height="24" rx="5"/>
+<text class="t-ax t-ad" x="232" y="273" text-anchor="middle">1.2 Planning &amp; control</text>
+
+<line class="line-ax-ad" x1="232" y1="280" x2="232" y2="292"/>
+<line class="line-ax-ad" x1="148" y1="292" x2="340" y2="292"/>
+
+<!-- 1.2.1 -->
+<line class="line-ax-ad" x1="148" y1="292" x2="148" y2="302"/>
+<rect class="ad-sf" x="102" y="302" width="92" height="34" rx="4"/>
+<text class="t-sf t-ad" x="148" y="316" text-anchor="middle">Rule-based &amp;</text>
+<text class="t-sf t-ad" x="148" y="327" text-anchor="middle">classical</text>
+<text class="t-pa" x="148" y="346" text-anchor="middle">State lattices</text>
+
+<!-- 1.2.2 -->
+<line class="line-ax-ad" x1="244" y1="292" x2="244" y2="302"/>
+<rect class="ad-sf" x="198" y="302" width="92" height="34" rx="4"/>
+<text class="t-sf t-ad" x="244" y="316" text-anchor="middle">Optimization</text>
+<text class="t-sf t-ad" x="244" y="327" text-anchor="middle">&amp; RL-based</text>
+<text class="t-pa" x="244" y="346" text-anchor="middle">Cost map · RL</text>
+<text class="t-wk" x="244" y="358" text-anchor="middle">DriveGPT4</text>
+
+<!-- 1.2.3 -->
+<line class="line-ax-ad" x1="340" y1="292" x2="340" y2="302"/>
+<rect class="ad-sf" x="292" y="302" width="96" height="34" rx="4"/>
+<text class="t-sf t-ad" x="340" y="316" text-anchor="middle">Generative &amp;</text>
+<text class="t-sf t-ad" x="340" y="327" text-anchor="middle">diffusion-based</text>
+<text class="t-pa" x="340" y="346" text-anchor="middle">Diff. trajectory</text>
+<text class="t-wk" x="340" y="358" text-anchor="middle">Diffusion-ES</text>
+
+<!-- ── 1.3 Interaction-aware Coupled WM ── -->
+<line class="line-dom-ad" x1="380" y1="120" x2="380" y2="390"/>
+<rect class="ad-ax" x="280" y="390" width="200" height="24" rx="5"/>
+<text class="t-ax t-ad" x="380" y="407" text-anchor="middle">1.3 Interaction-aware coupled WM</text>
+
+<line class="line-ax-ad" x1="380" y1="414" x2="380" y2="426"/>
+<line class="line-ax-ad" x1="280" y1="426" x2="446" y2="426"/>
+
+<!-- 1.3.1 -->
+<line class="line-ax-ad" x1="280" y1="426" x2="280" y2="436"/>
+<rect class="ad-sf" x="228" y="436" width="104" height="34" rx="4"/>
+<text class="t-sf t-ad" x="280" y="450" text-anchor="middle">Joint prediction-</text>
+<text class="t-sf t-ad" x="280" y="461" text-anchor="middle">planning</text>
+<text class="t-pa" x="280" y="480" text-anchor="middle">Unified ego + agent</text>
+
+<!-- 1.3.2 -->
+<line class="line-ax-ad" x1="362" y1="426" x2="362" y2="436"/>
+<rect class="ad-sf" x="310" y="436" width="104" height="34" rx="4"/>
+<text class="t-sf t-ad" x="362" y="450" text-anchor="middle">Memory-</text>
+<text class="t-sf t-ad" x="362" y="461" text-anchor="middle">augmented</text>
+<text class="t-pa" x="362" y="480" text-anchor="middle">Long-horizon ctx</text>
+
+<!-- 1.3.3 -->
+<line class="line-ax-ad" x1="446" y1="426" x2="446" y2="436"/>
+<rect class="ad-sf" x="394" y="436" width="104" height="34" rx="4"/>
+<text class="t-sf t-ad" x="446" y="450" text-anchor="middle">Causal &amp;</text>
+<text class="t-sf t-ad" x="446" y="461" text-anchor="middle">counterfactual</text>
+<text class="t-pa" x="446" y="480" text-anchor="middle">CF reasoning</text>
+
+<!-- Open challenge AD -->
+<rect class="ch ch-ad" x="270" y="498" width="196" height="20" rx="4"/>
+<text class="t-ch t-ad" x="368" y="512" text-anchor="middle">Scalable causal discovery in open scenes</text>
+
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!-- DOMAIN 2: MULTI-AGENT  (x: 478–922, green)                   -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+<rect class="ma-dom" x="548" y="78" width="304" height="28" rx="6"/>
+<text class="t-dom t-ma" x="700" y="97" text-anchor="middle">2 · Multi-Agent Systems &amp; Social Interaction</text>
+
+<line class="line-dom-ma" x1="700" y1="106" x2="700" y2="120"/>
+<line class="line-dom-ma" x1="590" y1="120" x2="810" y2="120"/>
+
+<!-- ── 2.1 Coordination Paradigms ── -->
+<line class="line-dom-ma" x1="590" y1="120" x2="590" y2="132"/>
+<rect class="ma-ax" x="492" y="132" width="196" height="24" rx="5"/>
+<text class="t-ax t-ma" x="590" y="149" text-anchor="middle">2.1 Coordination paradigms</text>
+
+<line class="line-ax-ma" x1="590" y1="156" x2="590" y2="168"/>
+<line class="line-ax-ma" x1="510" y1="168" x2="670" y2="168"/>
+
+<!-- 2.1.1 -->
+<line class="line-ax-ma" x1="510" y1="168" x2="510" y2="178"/>
+<rect class="ma-sf" x="458" y="178" width="104" height="34" rx="4"/>
+<text class="t-sf t-ma" x="510" y="192" text-anchor="middle">Hierarchical &amp;</text>
+<text class="t-sf t-ma" x="510" y="203" text-anchor="middle">centralized</text>
+<text class="t-wk" x="510" y="222" text-anchor="middle">ConnectGPT · CCMA</text>
+
+<!-- 2.1.2 -->
+<line class="line-ax-ma" x1="590" y1="168" x2="590" y2="178"/>
+<rect class="ma-sf" x="538" y="178" width="104" height="34" rx="4"/>
+<text class="t-sf t-ma" x="590" y="192" text-anchor="middle">Decentralized &amp;</text>
+<text class="t-sf t-ma" x="590" y="203" text-anchor="middle">distributed</text>
+<text class="t-wk" x="590" y="222" text-anchor="middle">DriveAgent · V2V-LLM</text>
+
+<!-- 2.1.3 -->
+<line class="line-ax-ma" x1="670" y1="168" x2="670" y2="178"/>
+<rect class="ma-sf" x="618" y="178" width="104" height="34" rx="4"/>
+<text class="t-sf t-ma" x="670" y="192" text-anchor="middle">Human-in-the-</text>
+<text class="t-sf t-ma" x="670" y="203" text-anchor="middle">loop</text>
+<text class="t-wk" x="670" y="222" text-anchor="middle">Telldrive</text>
+
+<text class="t-pa" x="510" y="236" text-anchor="middle">Infrastructure</text>
+<text class="t-pa" x="590" y="236" text-anchor="middle">V2V cooperation</text>
+<text class="t-pa" x="670" y="236" text-anchor="middle">Human feedback</text>
+
+<!-- ── 2.2 Social Interaction & Scenario Gen ── -->
+<line class="line-dom-ma" x1="700" y1="120" x2="700" y2="256"/>
+<rect class="ma-ax" x="596" y="256" width="208" height="24" rx="5"/>
+<text class="t-ax t-ma" x="700" y="273" text-anchor="middle">2.2 Social interaction &amp; scenario gen.</text>
+
+<line class="line-ax-ma" x1="700" y1="280" x2="700" y2="292"/>
+<line class="line-ax-ma" x1="610" y1="292" x2="790" y2="292"/>
+
+<!-- 2.2.1 -->
+<line class="line-ax-ma" x1="610" y1="292" x2="610" y2="302"/>
+<rect class="ma-sf" x="558" y="302" width="104" height="34" rx="4"/>
+<text class="t-sf t-ma" x="610" y="316" text-anchor="middle">Controllable</text>
+<text class="t-sf t-ma" x="610" y="327" text-anchor="middle">social prefs</text>
+<text class="t-pa" x="610" y="346" text-anchor="middle">Ego / altruistic</text>
+
+<!-- 2.2.2 -->
+<line class="line-ax-ma" x1="700" y1="292" x2="700" y2="302"/>
+<rect class="ma-sf" x="648" y="302" width="104" height="34" rx="4"/>
+<text class="t-sf t-ma" x="700" y="316" text-anchor="middle">Socially-compliant</text>
+<text class="t-sf t-ma" x="700" y="327" text-anchor="middle">simulation</text>
+<text class="t-pa" x="700" y="346" text-anchor="middle">Traffic sim.</text>
+<text class="t-wk" x="700" y="358" text-anchor="middle">SocialDriveGen</text>
+
+<!-- 2.2.3 -->
+<line class="line-ax-ma" x1="790" y1="292" x2="790" y2="302"/>
+<rect class="ma-sf" x="738" y="302" width="104" height="34" rx="4"/>
+<text class="t-sf t-ma" x="790" y="316" text-anchor="middle">Game-theoretic</text>
+<text class="t-sf t-ma" x="790" y="327" text-anchor="middle">&amp; strategic</text>
+<text class="t-pa" x="790" y="346" text-anchor="middle">Equilibria · nego.</text>
+
+<!-- ── 2.3 Safety-critical & Causal ── -->
+<line class="line-dom-ma" x1="810" y1="120" x2="810" y2="390"/>
+<rect class="ma-ax" x="706" y="390" width="208" height="24" rx="5"/>
+<text class="t-ax t-ma" x="810" y="407" text-anchor="middle">2.3 Safety-critical &amp; causal reasoning</text>
+
+<line class="line-ax-ma" x1="810" y1="414" x2="810" y2="426"/>
+<line class="line-ax-ma" x1="724" y1="426" x2="896" y2="426"/>
+
+<line class="line-ax-ma" x1="724" y1="426" x2="724" y2="436"/>
+<rect class="ma-pa" x="672" y="436" width="104" height="30" rx="4"/>
+<text class="t-pa" x="724" y="454" text-anchor="middle">Risk-aware interaction</text>
+
+<line class="line-ax-ma" x1="810" y1="426" x2="810" y2="436"/>
+<rect class="ma-pa" x="758" y="436" width="104" height="30" rx="4"/>
+<text class="t-pa" x="810" y="454" text-anchor="middle">Safety-constrained</text>
+
+<line class="line-ax-ma" x1="896" y1="426" x2="896" y2="436"/>
+<rect class="ma-pa" x="844" y="436" width="104" height="30" rx="4"/>
+<text class="t-pa" x="896" y="454" text-anchor="middle">CF social analysis</text>
+
+<!-- Open challenge MA -->
+<rect class="ch ch-ma" x="716" y="480" width="208" height="20" rx="4"/>
+<text class="t-ch t-ma" x="820" y="494" text-anchor="middle">Formal safety in open-ended social interaction</text>
+
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!-- DOMAIN 3: EMBODIED AI  (x: 954–1396, amber)                  -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+<rect class="em-dom" x="1020" y="78" width="296" height="28" rx="6"/>
+<text class="t-dom t-em" x="1168" y="97" text-anchor="middle">3 · Embodied AI &amp; Robotic World Models</text>
+
+<line class="line-dom-em" x1="1168" y1="106" x2="1168" y2="120"/>
+<line class="line-dom-em" x1="1058" y1="120" x2="1278" y2="120"/>
+
+<!-- ── 3.1 Embodied Policy & Action ── -->
+<line class="line-dom-em" x1="1058" y1="120" x2="1058" y2="132"/>
+<rect class="em-ax" x="960" y="132" width="196" height="24" rx="5"/>
+<text class="t-ax t-em" x="1058" y="149" text-anchor="middle">3.1 Embodied policy &amp; action</text>
+
+<line class="line-ax-em" x1="1058" y1="156" x2="1058" y2="168"/>
+<line class="line-ax-em" x1="978" y1="168" x2="1138" y2="168"/>
+
+<!-- 3.1.1 -->
+<line class="line-ax-em" x1="978" y1="168" x2="978" y2="178"/>
+<rect class="em-sf" x="926" y="178" width="104" height="34" rx="4"/>
+<text class="t-sf t-em" x="978" y="192" text-anchor="middle">Vision-language-</text>
+<text class="t-sf t-em" x="978" y="203" text-anchor="middle">action (VLA)</text>
+<text class="t-pa" x="978" y="222" text-anchor="middle">Autoreg · Diff · RL</text>
+
+<!-- 3.1.2 -->
+<line class="line-ax-em" x1="1058" y1="168" x2="1058" y2="178"/>
+<rect class="em-sf" x="1006" y="178" width="104" height="34" rx="4"/>
+<text class="t-sf t-em" x="1058" y="192" text-anchor="middle">Modality-</text>
+<text class="t-sf t-em" x="1058" y="203" text-anchor="middle">specialized</text>
+<text class="t-wk" x="1058" y="222" text-anchor="middle">3D-VLA · EgoVLA</text>
+
+<!-- 3.1.3 -->
+<line class="line-ax-em" x1="1138" y1="168" x2="1138" y2="178"/>
+<rect class="em-sf" x="1086" y="178" width="104" height="34" rx="4"/>
+<text class="t-sf t-em" x="1138" y="192" text-anchor="middle">Safety, eval &amp;</text>
+<text class="t-sf t-em" x="1138" y="203" text-anchor="middle">verification</text>
+<text class="t-wk" x="1138" y="222" text-anchor="middle">SAFE · AutoEval</text>
+
+<!-- ── 3.2 Agent Foundation Models ── -->
+<line class="line-dom-em" x1="1168" y1="120" x2="1168" y2="256"/>
+<rect class="em-ax" x="1066" y="256" width="204" height="24" rx="5"/>
+<text class="t-ax t-em" x="1168" y="273" text-anchor="middle">3.2 Agent foundation models</text>
+
+<line class="line-ax-em" x1="1168" y1="280" x2="1168" y2="292"/>
+<line class="line-ax-em" x1="1072" y1="292" x2="1264" y2="292"/>
+
+<!-- 3.2.1 -->
+<line class="line-ax-em" x1="1072" y1="292" x2="1072" y2="302"/>
+<rect class="em-sf" x="1020" y="302" width="104" height="34" rx="4"/>
+<text class="t-sf t-em" x="1072" y="316" text-anchor="middle">Multi-task</text>
+<text class="t-sf t-em" x="1072" y="327" text-anchor="middle">training</text>
+<text class="t-pa" x="1072" y="346" text-anchor="middle">Cross-domain gen.</text>
+
+<!-- 3.2.2 -->
+<line class="line-ax-em" x1="1168" y1="292" x2="1168" y2="302"/>
+<rect class="em-sf" x="1116" y="302" width="104" height="34" rx="4"/>
+<text class="t-sf t-em" x="1168" y="316" text-anchor="middle">Physics engines</text>
+<text class="t-sf t-em" x="1168" y="327" text-anchor="middle">&amp; simulation</text>
+<text class="t-wk" x="1168" y="346" text-anchor="middle">Genesis · ManiSkill3</text>
+<text class="t-wk" x="1168" y="358" text-anchor="middle">Colosseo</text>
+
+<!-- 3.2.3 -->
+<line class="line-ax-em" x1="1264" y1="292" x2="1264" y2="302"/>
+<rect class="em-sf" x="1212" y="302" width="104" height="34" rx="4"/>
+<text class="t-sf t-em" x="1264" y="316" text-anchor="middle">Closed-loop &amp;</text>
+<text class="t-sf t-em" x="1264" y="327" text-anchor="middle">sim-to-real</text>
+<text class="t-pa" x="1264" y="346" text-anchor="middle">Deployment · adapt.</text>
+
+<!-- ── 3.3 Foundations ── -->
+<line class="line-dom-em" x1="1278" y1="120" x2="1278" y2="390"/>
+<rect class="em-ax" x="1176" y="390" width="204" height="24" rx="5"/>
+<text class="t-ax t-em" x="1278" y="407" text-anchor="middle">3.3 Foundations of embodied intel.</text>
+
+<line class="line-ax-em" x1="1278" y1="414" x2="1278" y2="426"/>
+<line class="line-ax-em" x1="1182" y1="426" x2="1374" y2="426"/>
+
+<!-- 3.3.1 -->
+<line class="line-ax-em" x1="1182" y1="426" x2="1182" y2="436"/>
+<rect class="em-sf" x="1130" y="436" width="104" height="30" rx="4"/>
+<text class="t-sf t-em" x="1182" y="450" text-anchor="middle">Biological</text>
+<text class="t-sf t-em" x="1182" y="461" text-anchor="middle">inspiration</text>
+<text class="t-pa" x="1182" y="478" text-anchor="middle">Cellular automata</text>
+
+<!-- 3.3.2 -->
+<line class="line-ax-em" x1="1278" y1="426" x2="1278" y2="436"/>
+<rect class="em-sf" x="1226" y="436" width="104" height="30" rx="4"/>
+<text class="t-sf t-em" x="1278" y="450" text-anchor="middle">Cognition &amp;</text>
+<text class="t-sf t-em" x="1278" y="461" text-anchor="middle">mental WMs</text>
+<text class="t-pa" x="1278" y="478" text-anchor="middle">Multimodal percept.</text>
+
+<!-- 3.3.3 -->
+<line class="line-ax-em" x1="1374" y1="426" x2="1374" y2="436"/>
+<rect class="em-sf" x="1322" y="436" width="104" height="30" rx="4"/>
+<text class="t-sf t-em" x="1374" y="450" text-anchor="middle">WMs beyond</text>
+<text class="t-sf t-em" x="1374" y="461" text-anchor="middle">VLA</text>
+<text class="t-pa" x="1374" y="478" text-anchor="middle">Latent dynamics</text>
+
+<!-- Open challenge EM -->
+<rect class="ch ch-em" x="1180" y="498" width="196" height="20" rx="4"/>
+<text class="t-ch t-em" x="1278" y="512" text-anchor="middle">Unifying latent WMs with grounded action</text>
+
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!-- CROSS-DOMAIN DASHED LINKS (routed to avoid all boxes)        -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+
+<!-- Link A: 1.2.3 Diffusion planning (340,336) ↔ 3.1.1 VLA Diff (978,195) -->
+<!-- Route: go down from 1.2.3 to y=375, then right across gap to y=375, then up to 3.1.1 -->
+<path class="xlink" d="M388 330 C460 330, 460 250, 540 250 C620 250, 860 180, 926 195"/>
+<circle class="xdot" cx="388" cy="330" r="2.5"/>
+<circle class="xdot" cx="926" cy="195" r="2.5"/>
+<text class="t-xlink" x="620" y="242" text-anchor="middle">diffusion planning ↔ diffusion VLA</text>
+
+<!-- Link B: 1.3.3 Causal AD (498,453) ↔ 2.3 Causal MA (706,442) -->
+<!-- Horizontal route through gap below boxes -->
+<path class="xlink" d="M498 453 Q580 470, 672 453"/>
+<circle class="xdot" cx="498" cy="453" r="2.5"/>
+<circle class="xdot" cx="672" cy="453" r="2.5"/>
+<text class="t-xlink" x="585" y="478" text-anchor="middle">causal interaction ↔ CF social reasoning</text>
+
+<!-- Link C: 2.1 Social (492,144) ↔ 1.3 Interaction (480,402) — vertical route in the gap -->
+<path class="xlink" d="M492 152 L470 152 L470 402 L480 402"/>
+<circle class="xdot" cx="492" cy="152" r="2.5"/>
+<circle class="xdot" cx="480" cy="402" r="2.5"/>
+<text class="t-xlink" x="458" y="280" text-anchor="middle" transform="rotate(-90 458 280)">social ↔ interaction WM</text>
+
+<!-- Link D: 3.2.2 Physics (1168,336) ↔ 3.3 Foundations (1176,402) — short vertical -->
+<path class="xlink" d="M1160 336 Q1150 370, 1176 402"/>
+<circle class="xdot" cx="1160" cy="336" r="2.5"/>
+<circle class="xdot" cx="1176" cy="402" r="2.5"/>
+
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!-- CLOSED-LOOP FLOW STRIP                                        -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+<rect x="260" y="550" width="880" height="32" rx="8" fill="#F0E8F4" stroke="#C4B0D4" stroke-width="0.5"/>
+<text class="t-flow" x="330" y="570" text-anchor="middle">Perception</text>
+<text class="t-flow-s" x="393" y="570" text-anchor="middle">→</text>
+<text class="t-flow" x="468" y="570" text-anchor="middle">World modeling</text>
+<text class="t-flow-s" x="548" y="570" text-anchor="middle">→</text>
+<text class="t-flow" x="628" y="570" text-anchor="middle">Planning / policy</text>
+<text class="t-flow-s" x="714" y="570" text-anchor="middle">→</text>
+<text class="t-flow" x="786" y="570" text-anchor="middle">Action / interaction</text>
+<text class="t-flow-s" x="872" y="570" text-anchor="middle">→</text>
+<text class="t-flow" x="952" y="570" text-anchor="middle">Env. update</text>
+<text class="t-flow-s" x="1050" y="570" text-anchor="middle">↻ feedback</text>
+
+<text class="t-flow-s" x="700" y="596" text-anchor="middle">Closed-loop embodied intelligence — a systems-level framing spanning all three domains</text>
+
+
+<!-- ══════════════════════════════════════════════════════════════ -->
+<!-- FOOTER: ANNOTATIONS                                           -->
+<!-- ══════════════════════════════════════════════════════════════ -->
+
+<!-- Box 1: Key distinctions -->
+<rect x="60" y="620" width="380" height="76" rx="6" fill="#F8F8FA" stroke="#E0E0E4" stroke-width="0.5"/>
+<text class="t-ann-b" x="76" y="638">Key conceptual distinctions</text>
+<text class="t-ann" x="76" y="654">Generative model</text>
+<text class="t-neq" x="168" y="654">≠</text>
+<text class="t-ann" x="180" y="654">World model — action-conditioned dynamics required</text>
+<text class="t-ann" x="76" y="668">Embodied model</text>
+<text class="t-neq" x="168" y="668">≠</text>
+<text class="t-ann" x="180" y="668">VLA only — latent dynamics &amp; physics WMs equally central</text>
+<text class="t-ann" x="76" y="682">Planning, interaction, and world modeling are coupled but distinct axes</text>
+
+<!-- Box 2: Hierarchy -->
+<rect x="460" y="620" width="280" height="76" rx="6" fill="#F8F8FA" stroke="#E0E0E4" stroke-width="0.5"/>
+<text class="t-ann-b" x="476" y="638">Abstraction hierarchy</text>
+<text class="t-ann" x="476" y="654">Domain → Technical axis → Sub-field → Paradigm → Work</text>
+<line x1="476" y1="662" x2="720" y2="662" stroke="#E0E0E4" stroke-width="0.4"/>
+<text class="t-ann" x="476" y="676">Dashed border = open challenge / emerging direction</text>
+<text class="t-ann" x="476" y="690">Dashed connector = cross-domain conceptual relation</text>
+
+<!-- Box 3: Color legend -->
+<rect x="760" y="620" width="280" height="76" rx="6" fill="#F8F8FA" stroke="#E0E0E4" stroke-width="0.5"/>
+<text class="t-ann-b" x="776" y="638">Color encoding</text>
+<rect x="776" y="648" width="12" height="10" rx="2" fill="#E6F1FB" stroke="#6DAAD4" stroke-width="0.5"/>
+<text class="t-ann" x="794" y="657">Autonomous driving</text>
+<rect x="776" y="664" width="12" height="10" rx="2" fill="#E6F3ED" stroke="#5DBFA0" stroke-width="0.5"/>
+<text class="t-ann" x="794" y="673">Multi-agent / social interaction</text>
+<rect x="776" y="680" width="12" height="10" rx="2" fill="#FAF0E4" stroke="#D4A050" stroke-width="0.5"/>
+<text class="t-ann" x="794" y="689">Embodied AI / robotics</text>
+
+<!-- Box 4: Node types -->
+<rect x="1060" y="620" width="280" height="76" rx="6" fill="#F8F8FA" stroke="#E0E0E4" stroke-width="0.5"/>
+<text class="t-ann-b" x="1076" y="638">Node semantics</text>
+<rect x="1076" y="648" width="18" height="10" rx="3" fill="#F0F6FC" stroke="#A3C8E8" stroke-width="0.6"/>
+<text class="t-legend" x="1100" y="657">Category / sub-field</text>
+<rect x="1076" y="664" width="18" height="10" rx="3" fill="#FFF" stroke="#D0E4F2" stroke-width="0.5"/>
+<text class="t-legend" x="1100" y="673">Paradigm / method family</text>
+<rect x="1076" y="680" width="18" height="10" rx="3" fill="#F5F5F5" stroke="#D0D0D0" stroke-width="0.4"/>
+<text class="t-legend" x="1100" y="689">Representative work</text>
+<text class="t-legend" x="1220" y="657">Dashed = open challenge</text>
+<text class="t-legend" x="1220" y="673">- - - = cross-domain link</text>
+
+</svg>

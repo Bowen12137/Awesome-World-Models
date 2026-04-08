@@ -3,9 +3,8 @@
 # 🌍 Awesome World Models
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-![Papers](https://img.shields.io/badge/papers-489-blue)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+![Papers](https://img.shields.io/badge/papers-269-blue)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
 **The Most Comprehensive Collection of World Models Research**
 
@@ -20,7 +19,7 @@
 ## 🌳 World Models Evolutionary Tree
 
 <p align="center">
-  <img src="assets/images/tree.png" width="100%">
+  <img src="assets/images/taxonomy_world_models.svg" width="100%">
 </p>
 
 
@@ -30,7 +29,7 @@
 - **[2026-03-06]** 🎉 Repository launched! Unified collection of 489 papers from four major World Models repositories
 - **[2026-03-06]** 🆕 Added 11 latest papers from arXiv 2026 (LaST-VLA, ResWorld, DriveWorld-VLA, etc.)
 - **[2026-03-06]** 📊 Added comprehensive statistics and visualizations: 74 starred papers, 195 with code
-- **[2026-03-06]** 🗂️ Introduced dual-dimension taxonomy: Paradigm (VideoGen/OccGen/LiDARGen) + Application domains
+- **[2026-03-06]** 🗂️ Introduced a strict paper-only research taxonomy plus dedicated resource sections
 - **[2026-03-06]** 🤖 Integrated learning resources: talks, courses, tutorials, and datasets
 
 ---
@@ -41,17 +40,15 @@
 - [🗺️ Taxonomy](#️-taxonomy)
 - [📚 Research](#-research)
   - [Surveys & Reviews](#surveys--reviews)
-  - [Papers by Paradigm](#papers-by-paradigm)
-    - [🎬 VideoGen: Video-based World Models](#-videogen-video-based-world-models)
-    - [🧊 OccGen: Occupancy-based World Models](#-occgen-occupancy-based-world-models)
-    - [📡 LiDARGen: LiDAR-based World Models](#-lidargen-lidar-based-world-models)
-  - [Papers by Application](#papers-by-application)
+  - [Theory & Foundations](#theory--foundations)
+  - [Benchmarks & Evaluation](#benchmarks--evaluation)
+  - [Primary Research by Domain](#primary-research-by-domain)
+    - [🌐 General / Foundational](#-general--foundational)
     - [🚗 Autonomous Driving](#-autonomous-driving)
     - [🤖 Embodied AI & Robotics](#-embodied-ai--robotics)
-    - [🎮 Game Simulation & XR](#-game-simulation--xr)
-    - [🔬 Scientific Applications](#-scientific-applications)
-  - [💡 Theory & Explainability](#-theory--explainability)
-  - [🏢 Industry Reports](#-industry-reports)
+    - [🎮 Interactive Digital Environments](#-interactive-digital-environments)
+    - [👥 Social / Multi-Agent](#-social--multi-agent)
+    - [🔬 Scientific World Models](#-scientific-world-models)
 - [🎓 Learning Resources](#-learning-resources)
   - [📺 Talks & Presentations](#-talks--presentations)
   - [🎓 Courses & Tutorials](#-courses--tutorials)
@@ -62,6 +59,7 @@
 - [🌐 Community](#-community)
   - [🏆 Workshops & Challenges](#-workshops--challenges)
   - [👥 Research Groups](#-research-groups)
+  - [💬 Discussion Spaces](#-discussion-spaces)
 - [🤝 Contributing](#-contributing)
 - [📜 Citation](#-citation)
 - [⭐ Star History](#-star-history)
@@ -91,37 +89,34 @@
 
 ## 🗺️ Taxonomy
 
-This repository organizes world models research along **two complementary dimensions**:
+This repository uses a **strict two-track information architecture**:
 
-### Dimension 1: Representation Paradigms
+### Track 1: Research taxonomy (paper-only)
 
-How world models represent and generate environmental states:
+All entries under `Research` are papers only, and each paper appears in exactly **one canonical place**:
 
-- **🎬 VideoGen**: Video-based representations using pixel-space generation
-  - Leverages powerful video generation models (diffusion, transformers)
-  - Natural for camera-based perception systems
-  - Examples: Genie, GAIA-1, DriveDreamer
+- `Surveys & Reviews`
+- `Theory & Foundations`
+- `Benchmarks & Evaluation`
+- `Primary Research by Domain`
+  - `General / Foundational`
+  - `Autonomous Driving`
+  - `Embodied AI & Robotics`
+  - `Interactive Digital Environments`
+  - `Social / Multi-Agent`
+  - `Scientific World Models`
 
-- **🧊 OccGen**: Occupancy-based 3D representations
-  - Explicit 3D spatial structure using voxel grids or occupancy fields
-  - Efficient for 3D reasoning and planning
-  - Examples: OccWorld, GaussianWorld, UniScene
+### Track 2: Resource taxonomy (non-paper)
 
-- **📡 LiDARGen**: LiDAR-based point cloud generation
-  - Direct modeling of 3D sensor data
-  - Preserves geometric precision
-  - Examples: LiDARGen, DynamicCity, LiSTAR
+Non-paper resources are preserved in dedicated sections:
 
-### Dimension 2: Application Domains
+- **Learning Resources**: talks, tutorials, and courses
+- **Practical Resources**: datasets, benchmarks, tools, libraries, and simulators
+- **Community**: workshops, challenges, research groups, and discussion spaces
 
-Where world models are applied:
+For paper classification, labels such as `VLA`, `navigation`, `locomotion`, `planning/RL`, `simulation`, and `web-agent` are treated as **tags**, not canonical top-level categories.
 
-- **🚗 Autonomous Driving**: Scene prediction, planning, and simulation for self-driving vehicles
-- **🤖 Embodied AI & Robotics**: Manipulation, navigation, and interaction in physical environments
-- **🎮 Game Simulation & XR**: Procedural content generation and interactive experiences
-- **🔬 Scientific Applications**: Physics simulation, molecular dynamics, climate modeling
-
-> 📖 For detailed taxonomy explanation, see [docs/research/taxonomy.md](docs/research/taxonomy.md)
+> 📖 For the authoritative classification rules, see [docs/research/taxonomy.md](docs/research/taxonomy.md)
 
 ---
 
@@ -131,7 +126,7 @@ Where world models are applied:
 
 Comprehensive surveys and review papers on world models:
 
-| Title | Venue | Resources |
+| Paper | Venue | Resources |
 |-------|-------|-----------|
 | ⭐ **The Role of World Models in Shaping Autonomous Driving: A Comprehensive Survey** | `arXiv 25.02` | [![arXiv](https://img.shields.io/badge/arXiv-2502.10498-b31b1b.svg)](https://arxiv.org/abs/2502.10498) |
 | **Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI** | `TMECH 25` | [![arXiv](https://img.shields.io/badge/arXiv-2407.06886-b31b1b.svg)](https://arxiv.org/abs/2407.06886) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/HCPLab-SYSU/Embodied_AI_Paper_List) |
@@ -142,22 +137,63 @@ Comprehensive surveys and review papers on world models:
 | **A Survey on Future Physical World Generation for Autonomous Driving** | `MMAsia 25` | [![Paper](https://img.shields.io/badge/Paper-Link-blue)](https://dl.acm.org/doi/full/10.1145/3769748.3773345) |
 | **The Safety Challenge of World Models for Embodied AI Agents: A Review** | `arXiv 25.10` | [![arXiv](https://img.shields.io/badge/arXiv-2510.05865-b31b1b.svg)](https://arxiv.org/abs/2510.05865) |
 | **Progressive Robustness-Aware World Models in Autonomous Driving: A Review and Outlook** | `techrXiv 25.11` | [![Paper](https://img.shields.io/badge/Paper-Link-blue)](https://doi.org/10.36227/techrxiv.176523308.84756413/v1) |
-| ⭐ **A Path Towards Autonomous Machine Intelligence** (Yann LeCun) | `OpenReview` | [![OpenReview](https://img.shields.io/badge/OpenReview-Paper-8E44AD.svg)](https://openreview.net/pdf?id=BZ5a1r-kVsf) [![Video](https://img.shields.io/badge/Video-YouTube-red)](https://www.youtube.com/watch?v=OKkEdTchsiE) |
-
-> 📖 For complete list of surveys, see [docs/research/surveys.md](docs/research/surveys.md)
+| ⭐ **A Path Towards Autonomous Machine Intelligence** | `OpenReview` | [![OpenReview](https://img.shields.io/badge/OpenReview-Paper-8E44AD.svg)](https://openreview.net/pdf?id=BZ5a1r-kVsf) [![Video](https://img.shields.io/badge/Video-YouTube-red)](https://www.youtube.com/watch?v=OKkEdTchsiE) |
+| ⭐ **A Survey of World Models for Autonomous Driving** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2501.11260-b31b1b.svg)](https://arxiv.org/abs/2501.11260) |
+| **World Models for Autonomous Driving: An Initial Survey** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2403.02622-b31b1b.svg)](https://arxiv.org/abs/2403.02622) |
+| **Interplay Between Video Generation and World Models in Autonomous Driving** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2411.02914-b31b1b.svg)](https://arxiv.org/abs/2411.02914) |
+| **World Models and Physical Simulation** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2507.00917-b31b1b.svg)](https://arxiv.org/abs/2507.00917) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://github.com/NJU3DV-LoongGroup/Embodied-World-Models-Survey) |
 
 ---
 
-### Papers by Paradigm
+### Theory & Foundations
 
-#### 🎬 VideoGen: Video-based World Models
+Conceptual, analytical, and foundational papers on world models.
 
-Video-based world models generate future frames in pixel space, leveraging powerful video generation architectures.
+| Paper | Venue | Resources |
+|-------|-------|-----------|
+| ⭐ **Inductive Biases in Transformers** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2602.06923-b31b1b.svg)](https://arxiv.org/abs/2602.06923) |
+| ⭐ **Physical Grounding in World Models** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2601.15533-b31b1b.svg)](https://arxiv.org/abs/2601.15533) |
 
-**Key Papers:**
+---
 
+### Benchmarks & Evaluation
 
-#### 🚗 Autonomous Driving Papers
+Benchmark, dataset, and evaluation papers for assessing world models.
+
+| Paper | Venue | Resources |
+|-------|-------|-----------|
+| **DrivingDojo Dataset** | `IPS 2024` | [![arXiv](https://img.shields.io/badge/arXiv-2410.10738-b31b1b.svg)](https://arxiv.org/abs/2410.10738) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://drivingdojo.github.io/) |
+| ⭐ **WorldLens** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2512.10958-b31b1b.svg)](https://arxiv.org/abs/2512.10958) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://worldbench.github.io/worldlens) |
+| **DrivingGen** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2601.01528-b31b1b.svg)](https://arxiv.org/abs/2601.01528) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://drivinggen-bench.github.io/) |
+| **Melting Pot: Multi-Agent RL Evaluation** | `-` | [![Website](https://img.shields.io/badge/Website-Link-blue)](https://deepmind.google/blog/melting-pot-an-evaluation-suite-for-multi-agent-reinforcement-learning/) |
+
+---
+
+### Primary Research by Domain
+
+#### 🌐 General / Foundational
+
+Primary research papers whose core contribution is broadly reusable across domains.
+
+| Paper | Venue | Resources |
+|-------|-------|-----------|
+| ⭐ **Agent Learning via Early Experience** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2510.08558-b31b1b.svg)](https://arxiv.org/pdf/2510.08558) |
+| ⭐ **General agents Contain World Models** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2506.01622-b31b1b.svg)](https://arxiv.org/abs/2506.01622) |
+| ⭐ **Persistent Embodied World Models** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2505.05495-b31b1b.svg)](https://arxiv.org/abs/2505.05495) |
+| ⭐ **Self-Improving Embodied Foundation Models** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2509.15155-b31b1b.svg)](https://arxiv.org/abs/2509.15155) |
+| ⭐ **World Models as Data Engine** | `arXiv 2025` | [![arXiv](https://img.shields.io/badge/arXiv-2511.19861-b31b1b.svg)](https://arxiv.org/abs/2511.19861) |
+| ⭐ **Dreamerv4** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2509.24527-b31b1b.svg)](https://arxiv.org/abs/2509.24527) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://danijar.com/project/dreamer4/) |
+| ⭐ **UWM** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2504.02792-b31b1b.svg)](https://arxiv.org/abs/2504.02792) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://weirdlabuw.github.io/uwm/) |
+| ⭐ **UVA** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2503.00200-b31b1b.svg)](https://arxiv.org/abs/2503.00200) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://unified-video-action-model.github.io/) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/ShuangLI59/unified_video_action) |
+| **DiWA** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2508.03645-b31b1b.svg)](https://arxiv.org/abs/2508.03645) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://diwa.cs.uni-freiburg.de) |
+| **LVP** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2512.15840-b31b1b.svg)](https://arxiv.org/abs/2512.15840) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://www.boyuan.space/large-video-planner/) |
+| ⭐ **LDA-1B** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2602.12215-b31b1b.svg)](https://arxiv.org/abs/2602.12215) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://pku-epic.github.io/LDA/) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/jiangranlv/latent-dynamics-action) |
+
+---
+
+#### 🚗 Autonomous Driving
+
+World models for scene prediction, planning, simulation, and control in self-driving systems.
 
 | Paper | Venue | Resources |
 |-------|-------|-----------|
@@ -167,7 +203,6 @@ Video-based world models generate future frames in pixel space, leveraging power
 | ⭐ **DriveWorld-VLA: Unifying World Modeling and Planning in Latent Space** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2602.06521-b31b1b.svg)](https://arxiv.org/abs/2602.06521) |
 | **RaWMPC: Risk-aware World Model Predictive Control** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2602.23259-b31b1b.svg)](https://arxiv.org/abs/2602.23259) |
 | **DiffusionHarmonizer: Online Generative Enhancement for Driving Simulation** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2602.24096-b31b1b.svg)](https://arxiv.org/abs/2602.24096) |
-| ⭐ **A Survey of World Models for Autonomous Driving** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2501.11260-b31b1b.svg)](https://arxiv.org/abs/2501.11260) |
 | ⭐ **Cosmos-Drive-Dreams** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2506.09042-b31b1b.svg)](https://arxiv.org/abs/2506.09042) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/nv-tlabs/Cosmos-Drive-Dreams) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://research.nvidia.com/labs/toronto-ai/cosmos_drive_dreams) |
 | **Drive-OccWorld** | `AAAI 2025` | [![arXiv](https://img.shields.io/badge/arXiv-2408.14197-b31b1b.svg)](https://arxiv.org/abs/2408.14197) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/yuyang-cloud/Drive-OccWorld) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://drive-occworld.github.io/) |
 | **DriveDreamer-2** | `AAAI 2025` | [![arXiv](https://img.shields.io/badge/arXiv-2403.06845-b31b1b.svg)](https://arxiv.org/abs/2403.06845) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://drivedreamer2.github.io/) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://drivedreamer2.github.io/) |
@@ -177,9 +212,7 @@ Video-based world models generate future frames in pixel space, leveraging power
 | **DriveDreamer** | `ECCV 2024` | [![arXiv](https://img.shields.io/badge/arXiv-2309.09777-b31b1b.svg)](https://arxiv.org/abs/2309.09777) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/JeffWang987/DriveDreamer) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://drivedreamer.github.io/) |
 | **DriveWorld** | `CVPR 2024` | [![arXiv](https://img.shields.io/badge/arXiv-2405.04390-b31b1b.svg)](https://arxiv.org/abs/2405.04390) |
 | **DrivingDiffusion** | `ECCV 2024` | [![arXiv](https://img.shields.io/badge/arXiv-2310.07771-b31b1b.svg)](https://arxiv.org/abs/2310.07771) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/shalfun/DrivingDiffusion) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://drivingdiffusion.github.io/) |
-| **DrivingDojo Dataset** | `IPS 2024` | [![arXiv](https://img.shields.io/badge/arXiv-2410.10738-b31b1b.svg)](https://arxiv.org/abs/2410.10738) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://drivingdojo.github.io/) |
 | **MagicDrive** | `ICLR 2024` | [![arXiv](https://img.shields.io/badge/arXiv-2310.02601-b31b1b.svg)](https://arxiv.org/abs/2310.02601) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/cure-lab/MagicDrive) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://gaoruiyuan.com/magicdrive/) |
-| **Workshop on Foundation Models for Autonomous Systems** | `CVPR 2024` | - |
 | **AdaptiveDriver** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2406.10714-b31b1b.svg)](https://arxiv.org/abs/2406.10714) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://arunbalajeev.github.io/world_models_planning/world_model_paper.html) |
 | **Dream to Drive** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2502.10012-b31b1b.svg)](https://arxiv.org/abs/2502.10012) |
 | **Dream4Drive** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2510.19195-b31b1b.svg)](https://arxiv.org/abs/2510.19195) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://wm-research.github.io/Dream4Drive/) |
@@ -189,9 +222,7 @@ Video-based world models generate future frames in pixel space, leveraging power
 | **DriveVLA-W0** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2510.12796-b31b1b.svg)](https://arxiv.org/abs/2510.12796) |
 | **DrivingGPT** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2412.18607-b31b1b.svg)](https://arxiv.org/abs/2412.18607) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://rogerchern.github.io/DrivingGPT/) |
 | ⭐ **GAIA-2** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2503.20523-b31b1b.svg)](https://arxiv.org/abs/2503.20523) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://wayve.ai/thinking/scaling-gaia-2/) |
-| ⭐ **WorldLens** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2512.10958-b31b1b.svg)](https://arxiv.org/abs/2512.10958) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://worldlens-ad.github.io) |
 | **STAGE** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2506.13138-b31b1b.svg)](https://arxiv.org/abs/2506.13138) |
-| **ReSim** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2506.09981-b31b1b.svg)](https://arxiv.org/abs/2506.09981) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/OpenDriveLab/ReSim) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://opendrivelab.com/ReSim) |
 | **Dreamland** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2506.08006-b31b1b.svg)](https://arxiv.org/abs/2506.08006) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://metadriverse.github.io/dreamland/) |
 | **LongDWM** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2506.01546-b31b1b.svg)](https://arxiv.org/abs/2506.01546) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://wang-xiaodong1899.github.io/longdwm/) |
 | **GeoDrive** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2505.22421-b31b1b.svg)](https://arxiv.org/abs/2505.22421) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/antonioo-c/GeoDrive) |
@@ -231,85 +262,49 @@ Video-based world models generate future frames in pixel space, leveraging power
 | **Delphi** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2406.01349-b31b1b.svg)](https://arxiv.org/abs/2406.01349) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/westlake-autolab/Delphi) |
 | **OccSora** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2405.20337-b31b1b.svg)](https://arxiv.org/abs/2405.20337) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/wzzheng/OccSora) |
 | **MagicDrive3D** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2405.14475-b31b1b.svg)](https://arxiv.org/abs/2405.14475) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://gaoruiyuan.com/magicdrive3d/) |
-| **Vista** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2405.17398-b31b1b.svg)](https://arxiv.org/abs/2405.17398) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/OpenDriveLab/Vista) |
 | **CarDreamer** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2405.09111-b31b1b.svg)](https://arxiv.org/abs/2405.09111) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/ucd-dare/CarDreamer) |
 | **DriveSim** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2405.05956-b31b1b.svg)](https://arxiv.org/abs/2405.05956) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/sreeramsa/DriveSim) |
 | **LidarDM** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2404.02903-b31b1b.svg)](https://arxiv.org/abs/2404.02903) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/vzyrianov/lidardm) |
-| **GenAD** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2403.09630-b31b1b.svg)](https://arxiv.org/abs/2403.09630) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://github.com/OpenDriveLab/DriveAGI?tab=readme-ov-file#genad-dataset-opendv-youtube) |
 | **GenAD (End-to-End)** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2402.11502-b31b1b.svg)](https://arxiv.org/abs/2402.11502) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/wzzheng/GenAD) |
-| **ViDAR** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2312.17655-b31b1b.svg)](https://arxiv.org/abs/2312.17655) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/OpenDriveLab/ViDAR) |
 | **Drive-WM** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2311.17918-b31b1b.svg)](https://arxiv.org/abs/2311.17918) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/BraveGroup/Drive-WM) |
 | **Cam4DOCC** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2311.17663-b31b1b.svg)](https://arxiv.org/abs/2311.17663) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/haomo-ai/Cam4DOcc) |
 | **Panacea** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2311.16813-b31b1b.svg)](https://arxiv.org/abs/2311.16813) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://panacea-ad.github.io/) |
 | **OccWorld** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2311.16038-b31b1b.svg)](https://arxiv.org/abs/2311.16038) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/wzzheng/OccWorld) |
 | **SafeDreamer** | `-` | [![OpenReview](https://img.shields.io/badge/OpenReview-Paper-8E44AD.svg)](https://openreview.net/forum?id=tsE5HLYtYg) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/PKU-Alignment/SafeDreamer) |
 | **SEM2** | `-` | [![Paper](https://img.shields.io/badge/Paper-Link-blue)](https://ieeexplore.ieee.org/abstract/document/10538211/) |
-| **DrivingGen** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2601.01528-b31b1b.svg)](https://arxiv.org/abs/2601.01528) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://drivinggen-bench.github.io/) |
-| **DrivingWorld** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2412.19505-b31b1b.svg)](https://arxiv.org/abs/2412.19505) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/YvanYin/DrivingWorld) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://huxiaotaostasy.github.io/DrivingWorld/index.html) |
-| **GenieDrive** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2512.12751-b31b1b.svg)](https://arxiv.org/abs/2512.12751) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://huster-yzy.github.io/geniedrive_project_page/) |
-| **ImagiDrive** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2508.11428-b31b1b.svg)](https://arxiv.org/abs/2508.11428) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/fudan-zvg/ImagiDrive) |
-| **Imagine-2-Drive** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2411.10171-b31b1b.svg)](https://arxiv.org/abs/2411.10171) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://anantagrg.github.io/Imagine-2-Drive.github.io/) |
-| **InfinityDrive** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2412.01522-b31b1b.svg)](https://arxiv.org/abs/2412.01522) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://metadrivescape.github.io/papers_project/InfinityDrive/page.html) |
-| **Interplay Between Video Generation and World Models in Autonomous Driving** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2411.02914-b31b1b.svg)](https://arxiv.org/abs/2411.02914) |
-| **LatentDriver** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2409.15730-b31b1b.svg)](https://arxiv.org/abs/2409.15730) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/Sephirex-X/LatentDriver) |
-| **MagicDrive3D** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2405.14475-b31b1b.svg)](https://arxiv.org/abs/2405.14475) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://gaoruiyuan.com/magicdrive3d/) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://gaoruiyuan.com/magicdrive3d/) |
 | **MoVieDrive** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2508.14327-b31b1b.svg)](https://arxiv.org/abs/2508.14327) |
 | **Think Before You Drive** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2512.03454-b31b1b.svg)](https://arxiv.org/abs/2512.03454) |
 | **Think2Drive** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2402.16720-b31b1b.svg)](https://arxiv.org/abs/2402.16720) |
 | **TrafficBots** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2303.04116-b31b1b.svg)](https://arxiv.org/abs/2303.04116) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/zhejz/TrafficBots) |
 | **UniDrive-WM** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2601.04453-b31b1b.svg)](https://arxiv.org/abs/2601.04453) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://unidrive-wm.github.io/UniDrive-WM) |
-| **World Models for Autonomous Driving: An Initial Survey** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2403.02622-b31b1b.svg)](https://arxiv.org/abs/2403.02622) |
 | **World4Drive** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2507.00603-b31b1b.svg)](https://arxiv.org/abs/2507.00603) |
-| **`CVPR 24 Workshop & Challenge | OpenDriveLab`** | `-` | - |
-| **`CVPR 25 Workshop & Challenge | OpenDriveLab`** | `-` | - |
-
----
-
-### Papers by Application
-
-#### 🚗 Autonomous Driving
-
-World models for scene prediction, planning, and simulation in self-driving vehicles.
-
-> 📄 See complete list above (40 papers total)
+| **GenieDrive** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2512.12751-b31b1b.svg)](https://arxiv.org/abs/2512.12751) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://huster-yzy.github.io/geniedrive_project_page/) |
+| **ImagiDrive** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2508.11428-b31b1b.svg)](https://arxiv.org/abs/2508.11428) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/fudan-zvg/ImagiDrive) |
+| **ReSim** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2506.09981-b31b1b.svg)](https://arxiv.org/abs/2506.09981) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/OpenDriveLab/ReSim) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://opendrivelab.com/ReSim) |
+| **Vista** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2405.17398-b31b1b.svg)](https://arxiv.org/abs/2405.17398) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/OpenDriveLab/Vista) |
+| **GenAD** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2403.09630-b31b1b.svg)](https://arxiv.org/abs/2403.09630) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://github.com/OpenDriveLab/DriveAGI?tab=readme-ov-file#genad-dataset-opendv-youtube) |
+| **ViDAR** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2312.17655-b31b1b.svg)](https://arxiv.org/abs/2312.17655) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/OpenDriveLab/ViDAR) |
 
 ---
 
 #### 🤖 Embodied AI & Robotics
 
-World models for manipulation, navigation, and interaction in physical environments.
-
-
-| ⭐ **DreamDojo** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2602.06949-b31b1b.svg)](https://arxiv.org/abs/2602.06949) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://huggingface.co/nvidia/DreamDojo) |
-| ⭐ **World Models as Data Engine** | `arXiv 2025` | [![arXiv](https://img.shields.io/badge/arXiv-2511.19861-b31b1b.svg)](https://arxiv.org/abs/2511.19861) |
-#### 🤖 Embodied AI Papers
+World models for manipulation, navigation, locomotion, VLA systems, and robot policy learning.
 
 | Paper | Venue | Resources |
 |-------|-------|-----------|
 | **Hand2World: Autoregressive Egocentric Interaction Generation via Free-Space Hand Gestures** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2602.09600-b31b1b.svg)](https://arxiv.org/abs/2602.09600) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://hand2world.github.io/) |
 | **GaussTwin: Unified Simulation and Correction with Gaussian Splatting for Robotic Digital Twins** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2603.05108-b31b1b.svg)](https://arxiv.org/abs/2603.05108) |
 | ⭐ **"Learning Primitive Embodied World Models: Towards Scalable Robotic Learning"** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2508.20840-b31b1b.svg)](https://arxiv.org/pdf/2508.20840) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://qiaosun22.github.io/PrimitiveWorld/) |
-| ⭐ **Agent Learning via Early Experience** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2510.08558-b31b1b.svg)](https://arxiv.org/pdf/2510.08558) |
-| ⭐ **General agents Contain World Models** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2506.01622-b31b1b.svg)](https://arxiv.org/abs/2506.01622) |
-| ⭐ **Persistent Embodied World Models** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2505.05495-b31b1b.svg)](https://arxiv.org/abs/2505.05495) |
-| ⭐ **Self-Improving Embodied Foundation Models** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2509.15155-b31b1b.svg)](https://arxiv.org/abs/2509.15155) |
-| ⭐ **World Models for Embodied AI** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2510.16732-b31b1b.svg)](https://arxiv.org/abs/2510.16732) |
-| **Workshop on Embodied World Models for Decision Making** | `IPS 2025` | - |
 | **EmbodieDreamer** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2507.05198-b31b1b.svg)](https://arxiv.org/pdf/2507.05198) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/GigaAI-research/EmbodieDreamer) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://embodiedreamer.github.io/) |
 | **Embodied AI Agents: Modeling the World** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2506.22355-b31b1b.svg)](https://arxiv.org/abs/2506.22355) |
 | **PhysicalAgent** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2509.13903-b31b1b.svg)](https://arxiv.org/abs/2509.13903) |
 | **Video Agent** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2410.10076-b31b1b.svg)](http://arxiv.org/abs/2410.10076) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://video-as-agent.github.io/) |
-| **Web Agents with World Models** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2410.13232-b31b1b.svg)](https://arxiv.org/abs/2410.13232) |
-
+| ⭐ **DreamDojo** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2602.06949-b31b1b.svg)](https://arxiv.org/abs/2602.06949) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://huggingface.co/nvidia/DreamDojo) |
 | **View-Consistent 4D World Model** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2602.09878-b31b1b.svg)](https://arxiv.org/abs/2602.09878) |
 | ⭐ **World Models as Reliable Simulators** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2602.13977-b31b1b.svg)](https://arxiv.org/abs/2602.13977) |
-#### 🦾 Robotics Papers
-
-| Paper | Venue | Resources |
-|-------|-------|-----------|
-| ⭐ **"Learning Primitive Embodied World Models: Towards Scalable Robotic Learning"** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2508.20840-b31b1b.svg)](https://arxiv.org/pdf/2508.20840) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://qiaosun22.github.io/PrimitiveWorld/) |
 | ⭐ **"Multi-Task Interactive Robot Fleet Learning with Visual World Models"** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2410.22689-b31b1b.svg)](https://arxiv.org/abs/2410.22689) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/UT-Austin-RPL/sirius-fleet/) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://ut-austin-rpl.github.io/sirius-fleet/) |
-| ⭐ **"Object-Centric World Model for Language-Guided Manipulation" [![arXiv](https://img** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2503.06170-b31b1b.svg)](https://arxiv.org/abs/2503.06170) |
+| ⭐ **Object-Centric World Model for Language-Guided Manipulation** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2503.06170-b31b1b.svg)](https://arxiv.org/abs/2503.06170) |
 | ⭐ **Robotic World Model** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2501.10100-b31b1b.svg)](https://arxiv.org/abs/2501.10100) |
 | ⭐ **Genie Envisioner** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2508.05635-b31b1b.svg)](https://arxiv.org/abs/2508.05635) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://genie-envisioner.github.io/) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/AgibotTech/Genie-Envisioner) |
 | ⭐ **WoW** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2509.22642-b31b1b.svg)](https://arxiv.org/abs/2509.22642) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://wow-world-model.github.io) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/wow-world-model/wow-world-model) |
@@ -325,8 +320,8 @@ World models for manipulation, navigation, and interaction in physical environme
 | ⭐ **DreamGen** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2505.12705-b31b1b.svg)](https://arxiv.org/abs/2505.12705) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://research.nvidia.com/labs/gear/dreamgen/) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/nvidia/GR00T-dreams) |
 | ⭐ **HiP** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2309.08587-b31b1b.svg)](http://arxiv.org/abs/2309.08587) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://hierarchical-planning-foundation-model.github.io/) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/anuragajay/hip/tree/main) |
 | **PAR** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2508.09822-b31b1b.svg)](https://arxiv.org/abs/2508.09822) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://hcplab-sysu.github.io/PhysicalAutoregressiveModel/) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/HCPLab-SYSU/PhysicalAutoregressiveModel) |
-| **iMoWM** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2510.07313-b31b1b.svg)](https://arxiv.org/abs/2510.07313) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://xingyoujun.github.io/imowm/) |
-| **WristWorld** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2510.07313-b31b1b.svg)](https://arxiv.org/abs/2510.07313) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://wrist-world.github.io) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/XuWuLingYu/WristWorld) |
+| **iMoWM** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2510.09036-b31b1b.svg)](https://arxiv.org/abs/2510.09036) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://xingyoujun.github.io/imowm/) |
+| **WristWorld** | `-` | [![Website](https://img.shields.io/badge/Website-Link-blue)](https://wrist-world.github.io) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/XuWuLingYu/WristWorld) |
 | **EMMA** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2509.22407-b31b1b.svg)](https://arxiv.org/abs/2509.22407) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://emma-gigaai.github.io) |
 | **PhysTwin** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2503.17973-b31b1b.svg)](http://arxiv.org/abs/2503.17973) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://jianghanxiao.github.io/phystwin-web/) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/Jianghanxiao/PhysTwin) |
 | ⭐ **KeyWorld** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2509.21027-b31b1b.svg)](https://arxiv.org/abs/2509.21027) |
@@ -355,7 +350,7 @@ World models for manipulation, navigation, and interaction in physical environme
 | **RoboHorizon** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2501.06605-b31b1b.svg)](https://arxiv.org/abs/2501.06605) |
 | **Dream to Manipulate** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2412.14957-b31b1b.svg)](https://arxiv.org/abs/2412.14957) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://leobarcellona.github.io/DreamToManipulate/) |
 | ⭐ **RoboDreamer** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2404.12377-b31b1b.svg)](https://arxiv.org/abs/2404.12377) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/rainbow979/robodreamer) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robovideo.github.io) |
-| ⭐ **Vidar** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2404.12377-b31b1b.svg)](https://arxiv.org/abs/2507.12898) |
+| ⭐ **Vidar** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2507.12898-b31b1b.svg)](https://arxiv.org/abs/2507.12898) |
 | **ManiGaussian** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2403.08321-b31b1b.svg)](https://arxiv.org/abs/2403.08321) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/GuanxingLu/ManiGaussian) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://guanxinglu.github.io/ManiGaussian/) |
 | ⭐ **WHALE** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2411.05619-b31b1b.svg)](https://arxiv.org/abs/2411.05619) |
 | ⭐ **VisualPredicator** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2410.23156-b31b1b.svg)](https://arxiv.org/abs/2410.23156) |
@@ -363,11 +358,6 @@ World models for manipulation, navigation, and interaction in physical environme
 | **Video2Action** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2411.07223-b31b1b.svg)](http://arxiv.org/abs/2411.07223) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://video-to-action.github.io/) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/video-to-action/video-to-action-release) |
 | **Diffuser** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2205.09991-b31b1b.svg)](http://arxiv.org/abs/2205.09991) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://diffusion-planning.github.io) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/jannerm/diffuser) |
 | **Decision Diffuser** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2211.15657-b31b1b.svg)](http://arxiv.org/abs/2211.15657) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/zbzhu99/decision-diffuser-jax) |
-
-#### 🚶 Navigation Papers
-
-| Paper | Venue | Resources |
-|-------|-------|-----------|
 | ⭐ **NWM (Navigation World Models)** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2412.03572-b31b1b.svg)](https://arxiv.org/abs/2412.03572) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://www.amirbar.net/nwm/) |
 | ⭐ **MindJourney** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2507.12508-b31b1b.svg)](https://arxiv.org/abs/2507.12508) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://umass-embodied-agi.github.io/MindJourney) |
 | **NavMorph** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2506.23468-b31b1b.svg)](https://arxiv.org/abs/2506.23468) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/Feliciaxyao/NavMorph) |
@@ -378,11 +368,6 @@ World models for manipulation, navigation, and interaction in physical environme
 | **AIF** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2510.23258-b31b1b.svg)](https://arxiv.org/abs/2510.23258) |
 | **X-MOBILITY** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2410.17491-b31b1b.svg)](https://arxiv.org/abs/2410.17491) |
 | **MWM** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2206.14244-b31b1b.svg)](http://arxiv.org/abs/2206.14244) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://sites.google.com/view/mwm-rl) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/younggyoseo/MWM) |
-
-#### 🦿 Locomotion Papers
-
-| Paper | Venue | Resources |
-|-------|-------|-----------|
 | ⭐ **Ego-VCP** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2510.11682-b31b1b.svg)](https://arxiv.org/abs/2510.11682) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://ego-vcp.github.io/) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/HybridRobotics/Ego-VCP) |
 | ⭐ **RWM-O** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2504.16680-b31b1b.svg)](https://arxiv.org/abs/2504.16680) |
 | ⭐ **DWL** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2408.14472-b31b1b.svg)](https://arxiv.org/abs/2408.14472) |
@@ -392,19 +377,10 @@ World models for manipulation, navigation, and interaction in physical environme
 | **Puppeteer** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2405.18418-b31b1b.svg)](https://arxiv.org/abs/2405.18418) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://nicklashansen.com/rlpuppeteer) |
 | **ProTerrain** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2510.19364-b31b1b.svg)](https://arxiv.org/abs/2510.19364) |
 | **Occupancy World Model** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2505.05512-b31b1b.svg)](https://arxiv.org/abs/2505.05512) |
-| ⭐ **1X World Model** | `-` | [![Blog](https://img.shields.io/badge/Blog-Link-orange)](https://www.1x.tech/discover/1x-world-model) |
-| ⭐ **GROOT-Dreams** | `-` | [![Blog](https://img.shields.io/badge/Blog-Link-orange)](https://blogs.nvidia.com/blog/nvidia-gtc-washington-dc-2025-news/#gr00t-dreams) |
 | **Humanoid World Models** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2506.01182-b31b1b.svg)](https://arxiv.org/abs/2506.01182) |
 | **Ego-Agent** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2502.05857-b31b1b.svg)](https://arxiv.org/abs/2502.05857) |
 | **D²PO** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2503.10480-b31b1b.svg)](https://arxiv.org/abs/2503.10480) |
 | **COMBO** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2404.10775-b31b1b.svg)](https://arxiv.org/abs/2404.10775) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://vis-www.cs.umass.edu/combo/) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/UMass-Foundation-Model/COMBO) |
-
-#### 🤖💬 Vision-Language-Action (VLA) Models
-
-World models integrated with vision-language-action architectures for robotic control.
-
-| Paper | Venue | Resources |
-|-------|-------|-----------|
 | ⭐ **CoT-VLA** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2503.22020-b31b1b.svg)](https://arxiv.org/abs/2503.22020) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://cot-vla.github.io/) |
 | ⭐ **UP-VLA** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2501.18867-b31b1b.svg)](https://arxiv.org/abs/2501.18867) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/CladernyJorn/UP-VLA) |
 | ⭐ **VPP** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2412.14803-b31b1b.svg)](https://arxiv.org/abs/2412.14803) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://video-prediction-policy.github.io) |
@@ -428,33 +404,15 @@ World models integrated with vision-language-action architectures for robotic co
 | **RISE** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2602.11075-b31b1b.svg)](https://arxiv.org/abs/2602.11075) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://opendrivelab.com/kai0-rl/) |
 | **GigaBrain-0** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2510.19430-b31b1b.svg)](https://arxiv.org/abs/2510.19430) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://gigabrain0.github.io/) |
 | **WMPO** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2511.09515-b31b1b.svg)](https://arxiv.org/abs/2511.09515) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://wm-po.github.io) |
-
-#### 🎯 Policy Learning with World Models
-
-General policy learning methods leveraging world models for embodied AI.
-
-| Paper | Venue | Resources |
-|-------|-------|-----------|
+| **DreamZero** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2602.15922-b31b1b.svg)](https://arxiv.org/abs/2602.15922) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://dreamzero0.github.io/) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/dreamzero0/dreamzero) |
+| **Fast-WAM** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2603.16666-b31b1b.svg)](https://arxiv.org/abs/2603.16666) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://yuantianyuan01.github.io/FastWAM/) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/yuantianyuan01/FastWAM) |
 | ⭐ **LingBot-VA** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2601.21998-b31b1b.svg)](https://arxiv.org/abs/2601.21998v1) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://technology.robbyant.com/lingbot-va) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/Robbyant/lingbot-va) |
-| ⭐ **UWM** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2504.02792-b31b1b.svg)](https://arxiv.org/abs/2504.02792) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://weirdlabuw.github.io/uwm/) |
-| ⭐ **UVA** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2503.00200-b31b1b.svg)](https://arxiv.org/abs/2503.00200) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://unified-video-action-model.github.io/) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/ShuangLI59/unified_video_action) |
-| **DiWA** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2508.03645-b31b1b.svg)](https://arxiv.org/abs/2508.03645) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://diwa.cs.uni-freiburg.de) |
-| ⭐ **Dreamerv4** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2509.24527-b31b1b.svg)](https://arxiv.org/abs/2509.24527) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://danijar.com/project/dreamer4/) |
-| **LVP** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2512.15840-b31b1b.svg)](https://arxiv.org/abs/2512.15840) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://www.boyuan.space/large-video-planner/) |
-| ⭐ **LDA-1B** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2602.12215-b31b1b.svg)](https://arxiv.org/abs/2602.12215) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://pku-epic.github.io/LDA/) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/jiangranlv/latent-dynamics-action) |
 
 ---
 
-#### 🎮 Game Simulation & XR
+#### 🎮 Interactive Digital Environments
 
-World models for procedural content generation and interactive experiences.
-
-
-| ⭐ **Web World Models** | `arXiv 2025` | [![arXiv](https://img.shields.io/badge/arXiv-2512.23676-b31b1b.svg)](https://arxiv.org/abs/2512.23676) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://ai.princeton.edu/news/2026/web-world-model-creates-unlimited-website-environments-without-sacrificing-logical) |
-| **Large-Scale World Model for Web Agent** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2602.14721-b31b1b.svg)](https://arxiv.org/abs/2602.14721) |
-| **World-Model-Augmented Web Agents** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2602.15384-b31b1b.svg)](https://arxiv.org/abs/2602.15384) |
-| **Multiplayer Video World Model in Minecraft** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2602.22208-b31b1b.svg)](https://arxiv.org/abs/2602.22208) |
-#### 🎮 Game & Simulation Papers
+World models for games, browser environments, web agents, and other interactive virtual settings.
 
 | Paper | Venue | Resources |
 |-------|-------|-----------|
@@ -465,62 +423,42 @@ World models for procedural content generation and interactive experiences.
 | **GameFactory** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2501.08325-b31b1b.svg)](http://arxiv.org/abs/2501.08325) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/KwaiVGI/GameFactory) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://yujiwen.github.io/gamefactory/) |
 | **Hunyuan-GameCraft-2** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2511.23429-b31b1b.svg)](https://arxiv.org/abs/2511.23429) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://hunyuan-gamecraft-2.github.io/) |
 | **Interactive Generative Video as Next-Generation Game Engine** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2503.17359-b31b1b.svg)](http://arxiv.org/abs/2503.17359) |
-| **Interplay Between Video Generation and World Models in Autonomous Driving** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2411.02914-b31b1b.svg)](https://arxiv.org/abs/2411.02914) |
-| **World Models and Physical Simulation** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2507.00917-b31b1b.svg)](https://arxiv.org/abs/2507.00917) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://github.com/NJU3DV-LoongGroup/Embodied-World-Models-Survey) |
 | ⭐ **GameNGen** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2408.14837-b31b1b.svg)](https://arxiv.org/abs/2408.14837) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://gamengen.github.io) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/google-research/google-research/tree/master/gamengen) |
 | ⭐ **DIAMOND** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2405.12399-b31b1b.svg)](https://arxiv.org/abs/2405.12399) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://diamond-wm.github.io) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/eloialonso/diamond) |
 | ⭐ **MineWorld** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2504.07257-b31b1b.svg)](https://arxiv.org/abs/2504.07257) |
 | ⭐ **HunyuanWorld 1.0** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2507.21809-b31b1b.svg)](https://arxiv.org/abs/2507.21809) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://hunyuanworld.github.io) |
 | **Oasis** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2411.11763-b31b1b.svg)](https://arxiv.org/abs/2411.11763) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://oasis-model.github.io) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/etched-ai/open-oasis) |
 | **Genie** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2402.15391-b31b1b.svg)](https://arxiv.org/abs/2402.15391) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://sites.google.com/view/genie-2024/home) |
-| **Genie 2** | `-` | [![Website](https://img.shields.io/badge/Website-Link-blue)](https://deepmind.google/discover/blog/genie-2-a-large-scale-foundation-world-model/) |
 | **WorldCrafter** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2412.09119-b31b1b.svg)](https://arxiv.org/abs/2412.09119) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://worldcrafter.github.io) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/sled-group/world-crafter) |
-| **Cosmos** | `-` | [![Website](https://img.shields.io/badge/Website-Link-blue)](https://www.nvidia.com/en-us/ai/cosmos/) |
+| ⭐ **Web World Models** | `arXiv 2025` | [![arXiv](https://img.shields.io/badge/arXiv-2512.23676-b31b1b.svg)](https://arxiv.org/abs/2512.23676) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://ai.princeton.edu/news/2026/web-world-model-creates-unlimited-website-environments-without-sacrificing-logical) |
+| **Large-Scale World Model for Web Agent** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2602.14721-b31b1b.svg)](https://arxiv.org/abs/2602.14721) |
+| **World-Model-Augmented Web Agents** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2602.15384-b31b1b.svg)](https://arxiv.org/abs/2602.15384) |
+| **Multiplayer Video World Model in Minecraft** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2602.22208-b31b1b.svg)](https://arxiv.org/abs/2602.22208) |
+| **Web Agents with World Models** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2410.13232-b31b1b.svg)](https://arxiv.org/abs/2410.13232) |
 
 ---
 
+#### 👥 Social / Multi-Agent
 
-#### 💡 Theory & Explainability
-
-Theoretical foundations and explainability of world models.
+World models centered on social interaction, collective behavior, or multi-agent reasoning.
 
 | Paper | Venue | Resources |
 |-------|-------|-----------|
-| ⭐ **Inductive Biases in Transformers** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2602.06923-b31b1b.svg)](https://arxiv.org/abs/2602.06923) |
-| ⭐ **Physical Grounding in World Models** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2601.15533-b31b1b.svg)](https://arxiv.org/abs/2601.15533) |
+| **Social World Models** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2509.00559-b31b1b.svg)](https://arxiv.org/abs/2509.00559) |
+| **Social World Model-Augmented Mechanism Design** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2510.19270-b31b1b.svg)](https://arxiv.org/abs/2510.19270) |
+| **SocioVerse** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2504.10157-b31b1b.svg)](http://arxiv.org/abs/2504.10157) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/FudanDISC/SocioVerse) |
+| **FreeAskWorld** | `Framework` | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/AIR-DISCOVER/FreeAskWorld) |
+| **Model-Based Social Navigation** | `Navigation` | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/ZJU-Robotics-Lab/model-based-social-navigation) |
+| **SOMA: Socio-physical Model of Activities** | `Activity Model` | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/ease-crc/soma) |
+| **Mini-Genie: Multi-Agent World Model** | `Multi-Agent` | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/danimelatru/Mini-Genie) |
+| **Social World Model Simulation** | `Simulation` | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/XuhuiZhou/social-world-model) |
+| **MotionLM: Multi-Agent Motion Forecasting** | `Prediction` | [![Website](https://img.shields.io/badge/Website-Link-blue)](https://waymo.com/research/motionlm/) |
 
 ---
 
-#### 👥 Social World Models & Multi-Agent Systems
+#### 🔬 Scientific World Models
 
-World models for social interaction, multi-agent coordination, and human behavior prediction.
-
-| Paper/Project | Type | Resources |
-|---------------|------|-----------|
-| **FreeAskWorld** | Framework | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/AIR-DISCOVER/FreeAskWorld) [![Paper](https://img.shields.io/badge/AAAI-2026-blue)]() |
-| **Model-Based Social Navigation** | Navigation | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/ZJU-Robotics-Lab/model-based-social-navigation) |
-| **SOMA: Socio-physical Model of Activities** | Activity Model | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/ease-crc/soma) |
-| **Mini-Genie: Multi-Agent World Model** | Multi-Agent | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/danimelatru/Mini-Genie) |
-| **Social World Model Simulation** | Simulation | [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/XuhuiZhou/social-world-model) |
-| **MotionLM: Multi-Agent Motion Forecasting** | Prediction | [![Website](https://img.shields.io/badge/Website-Link-blue)](https://waymo.com/research/motionlm/) |
-| **Melting Pot: Multi-Agent RL Evaluation** | Benchmark | [![Website](https://img.shields.io/badge/Website-Link-blue)](https://deepmind.google/blog/melting-pot-an-evaluation-suite-for-multi-agent-reinforcement-learning/) |
-
-**Key Topics:**
-- 🤝 Human-robot interaction modeling
-- 🚶 Pedestrian behavior prediction
-- 🎭 Social navigation in crowded environments
-- 🤖 Multi-agent coordination and communication
-- 🧠 Theory of mind for AI agents
-
-> 📖 For more on multi-agent systems, see [Multi-Agent Reinforcement Learning](https://en.wikipedia.org/wiki/Multi-agent_reinforcement_learning)
-
----
-
-#### 🔬 World Models for Science
-
-World models applied to scientific domains including medicine, biology, and social sciences.
-
-**Natural Science:**
+World models applied to scientific simulation, medicine, biology, and related domains.
 
 | Paper | Venue | Resources |
 |-------|-------|-----------|
@@ -533,14 +471,6 @@ World models applied to scientific domains including medicine, biology, and soci
 | **Xray2Xray** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2506.19055-b31b1b.svg)](https://arxiv.org/abs/2506.19055) |
 | ⭐ **Medical World Model** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2506.02327-b31b1b.svg)](https://arxiv.org/abs/2506.02327) |
 | **Surgical Vision World Model** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2503.02904-b31b1b.svg)](https://arxiv.org/abs/2503.02904) |
-
-**Social Science:**
-
-| Paper | Venue | Resources |
-|-------|-------|-----------|
-| **Social World Models** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2509.00559-b31b1b.svg)](https://arxiv.org/abs/2509.00559) |
-| **Social World Model-Augmented Mechanism Design** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2510.19270-b31b1b.svg)](https://arxiv.org/abs/2510.19270) |
-| **SocioVerse** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2504.10157-b31b1b.svg)](http://arxiv.org/abs/2504.10157) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/FudanDISC/SocioVerse) |
 
 ---
 
@@ -564,17 +494,19 @@ Key talks and presentations on world models:
 
 ### 🎓 Courses & Tutorials
 
-**Online Courses:**
-- **Deep Reinforcement Learning** (UC Berkeley CS285) - Covers model-based RL and world models [![Website](https://img.shields.io/badge/Website-Link-blue)](http://rail.eecs.berkeley.edu/deeprlcourse/)
-- **Stanford CS330: Deep Multi-Task and Meta Learning** - Includes world model architectures [![Website](https://img.shields.io/badge/Website-Link-blue)](https://cs330.stanford.edu/)
-- **MIT 6.S898: Deep Learning** - Foundation models and world models [![Website](https://img.shields.io/badge/Website-Link-blue)](https://phillipi.github.io/6.s898/)
+New to world models? Start with the beginner path below instead of jumping straight into papers or large codebases.
 
-**Tutorials:**
-- [Implementing DreamerV3 from Scratch](https://github.com/danijar/dreamerv3) - Official PyTorch implementation
-- [World Models Tutorial](https://worldmodels.github.io/) - Interactive introduction to world models
-- [CARLA Autonomous Driving Tutorial](https://carla.readthedocs.io/) - Simulation-based learning
+**Beginner Journey:**
+1. **Build intuition** — [World Models](https://worldmodels.github.io/) and [A Path Towards Autonomous Machine Intelligence](https://openreview.net/pdf?id=BZ5a1r-kVsf)
+2. **Learn the core loop** — [CS285: Deep Reinforcement Learning](http://rail.eecs.berkeley.edu/deeprlcourse/) and [DreamerV3](https://danijar.com/project/dreamerv3/)
+3. **Pick a track** — model-based RL, autonomous driving, or embodied AI / robotics
 
-> 🎓 For complete list of courses and tutorials (30+), see [docs/learning/tutorials.md](docs/learning/tutorials.md)
+**Choose your first track:**
+- **General / Model-Based RL** — start with Dreamer-style latent dynamics and planning
+- **Autonomous Driving** — start with CARLA, then driving world-model papers and benchmarks
+- **Embodied AI / Robotics** — start with CALVIN / LIBERO, then VLA and WAM systems
+
+> 🎓 For the full beginner-friendly learning path, curated tracks, and hands-on starting points, see [docs/learning/tutorials.md](docs/learning/tutorials.md)
 
 ---
 
@@ -608,13 +540,26 @@ Key talks and presentations on world models:
 
 ### 🎯 Benchmarks & Leaderboards
 
-**Evaluation Tools:**
-- **WorldLens** - Comprehensive evaluation framework for driving world models [![arXiv](https://img.shields.io/badge/arXiv-2512.10958-b31b1b.svg)](https://arxiv.org/abs/2512.10958)
-- **VBench** - Video generation quality metrics [![arXiv](https://img.shields.io/badge/arXiv-2311.17982-b31b1b.svg)](https://arxiv.org/abs/2311.17982)
-- **FVD** - Fréchet Video Distance for video quality
-- **LPIPS** - Learned Perceptual Image Patch Similarity
+**Driving:**
+- **WorldLens** - Full-spectrum evaluation for driving world models [![arXiv](https://img.shields.io/badge/arXiv-2512.10958-b31b1b.svg)](https://arxiv.org/abs/2512.10958)
+- **DrivingGen** - Benchmark for generative video world models in autonomous driving [![arXiv](https://img.shields.io/badge/arXiv-2601.01528-b31b1b.svg)](https://arxiv.org/abs/2601.01528)
+- **NAVSIM** - End-to-end planning benchmark for autonomous driving [![arXiv](https://img.shields.io/badge/arXiv-2406.15349-b31b1b.svg)](https://arxiv.org/abs/2406.15349)
 
-> 🎯 For complete benchmarks and leaderboards, see [docs/resources/benchmarks.md](docs/resources/benchmarks.md)
+**Embodied / Robotics:**
+- **LIBERO** - Knowledge transfer benchmark for lifelong robot learning [![arXiv](https://img.shields.io/badge/arXiv-2306.03310-b31b1b.svg)](https://arxiv.org/abs/2306.03310)
+- **CALVIN** - Language-conditioned manipulation benchmark [![arXiv](https://img.shields.io/badge/arXiv-2112.03227-b31b1b.svg)](https://arxiv.org/abs/2112.03227)
+- **RoboCasa** - Everyday manipulation benchmark in realistic simulation [![arXiv](https://img.shields.io/badge/arXiv-2406.02523-b31b1b.svg)](https://arxiv.org/abs/2406.02523)
+- **RoboTwin 2.0** - Bimanual manipulation benchmark with strong domain randomization [![arXiv](https://img.shields.io/badge/arXiv-2506.18088-b31b1b.svg)](https://arxiv.org/abs/2506.18088)
+
+**Video & World Generation:**
+- **WorldScore** - Unified benchmark for world generation [![arXiv](https://img.shields.io/badge/arXiv-2504.00983-b31b1b.svg)](https://arxiv.org/abs/2504.00983)
+- **VBench** - Video generation quality evaluation [![arXiv](https://img.shields.io/badge/arXiv-2311.17982-b31b1b.svg)](https://arxiv.org/abs/2311.17982)
+- **FVD / LPIPS / PSNR / SSIM** - Common quality metrics for rollout fidelity and perceptual realism
+
+**Multi-Agent:**
+- **Melting Pot** - Generalization-oriented multi-agent RL evaluation suite [![arXiv](https://img.shields.io/badge/arXiv-2211.13746-b31b1b.svg)](https://arxiv.org/abs/2211.13746)
+
+> 🎯 For complete benchmark suites, metrics, and leaderboards, see [docs/resources/benchmarks.md](docs/resources/benchmarks.md)
 
 ---
 
@@ -622,15 +567,15 @@ Key talks and presentations on world models:
 
 **Frameworks:**
 - **DreamerV3** - State-of-the-art model-based RL [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/danijar/dreamerv3)
-- **Stable Diffusion** - Foundation for video generation models
-- **PyTorch3D** - 3D deep learning library
+- **Stable Baselines3** - RL baselines and integration utilities [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/DLR-RM/stable-baselines3)
+- **PyTorch3D** - 3D deep learning library [![Website](https://img.shields.io/badge/Website-Link-blue)](https://pytorch3d.org/)
 
 **Simulation:**
 - **CARLA** - Open-source driving simulator [![Website](https://img.shields.io/badge/Website-Link-blue)](https://carla.org/)
-- **Isaac Sim** - NVIDIA robotics simulator
-- **MuJoCo** - Physics engine for robotics
+- **Isaac Sim** - NVIDIA robotics simulator [![Website](https://img.shields.io/badge/Website-Link-blue)](https://developer.nvidia.com/isaac-sim)
+- **MuJoCo** - Physics engine for robotics [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/deepmind/mujoco)
 
-> 🛠️ For complete list of tools, see [docs/resources/tools.md](docs/resources/tools.md)
+> 🛠️ For complete tools, libraries, and simulators, see [docs/resources/tools.md](docs/resources/tools.md)
 
 ---
 
@@ -642,7 +587,7 @@ Key talks and presentations on world models:
 - **ICCV 2025 Workshop on 4D World Models** - Bridging Generation and Reconstruction
 - **OpenDriveLab Challenges** - Annual autonomous driving competitions
 
-> 🏆 For complete list of workshops, see [docs/community/workshops.md](docs/community/workshops.md)
+> 🏆 For a fuller list of workshops and challenge venues, see [docs/community/workshops.md](docs/community/workshops.md)
 
 ---
 
@@ -655,24 +600,25 @@ Key talks and presentations on world models:
 - **UC Berkeley RAIL** - Model-based RL research
 - **DeepMind** - Genie, DreamerV3
 
-> 👥 For complete list of research groups, see [docs/community/research-groups.md](docs/community/research-groups.md)
+> 👥 For a fuller list of research groups and labs, see [docs/community/research-groups.md](docs/community/research-groups.md)
+
+---
+
+### 💬 Discussion Spaces
+
+- **r/MachineLearning** - Broad ML discussion and paper sharing
+- **Hugging Face Forums** - Model discussion and implementation questions
+- **Papers with Code** - Benchmark and code discovery
+
+> 💬 For additional communities and curated hubs, see [docs/community/communities.md](docs/community/communities.md)
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+Please use the contributor guide for submission rules, taxonomy requirements, and PR templates.
 
-**How to contribute:**
-1. Fork the repository
-2. Add your paper/resource following the format
-3. Ensure all links are valid
-4. Submit a pull request
-
-**Format for papers:**
-```markdown
-| **Paper Title** | `Venue Year` | [![arXiv](badge)](url) [![Code](badge)](url) |
-```
+- [Read CONTRIBUTING.md](CONTRIBUTING.md)
 
 ---
 
@@ -701,11 +647,11 @@ If you find this repository useful, please consider citing:
 
 ### Overview
 
-- **Total Papers**: 489
-- **Starred Papers**: 74
-- **Papers with Code**: 195 (40%)
-- **Year Range**: 2012 - 2026
-- **Top Venues**: CVPR (41), ICCV (16), ICLR (10)
+- **Total Papers**: 269
+- **Starred Papers**: 88
+- **Papers with Code**: 111 (41%)
+- **Year Range**: 2021 - 2026
+- **Top Venues**: AAAI (3), CVPR (2), ECCV (2)
 
 ### Visualizations
 

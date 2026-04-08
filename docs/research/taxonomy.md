@@ -1,283 +1,450 @@
 # World Models Taxonomy
 
-This document provides a detailed explanation of the classification system used in this repository.
+This document is the authoritative classification spec for paper entries in this repository.
 
-## Overview
-
-We organize world models research along **two complementary dimensions**:
-
-1. **Representation Paradigms**: How world models represent and generate environmental states
-2. **Application Domains**: Where world models are applied
-
-This dual-dimension taxonomy allows papers to be categorized by both their technical approach and their application area.
+The goal is to make paper placement strict, stable, and contributor-friendly while preserving broad coverage of the field.
 
 ---
 
-## Dimension 1: Representation Paradigms
+## 1. Scope
 
-### 🎬 VideoGen: Video-based World Models
+### Research is paper-only
 
-**Definition**: World models that generate future observations in pixel/video space.
+The `Research` section in `README.md` is reserved for papers only:
+- survey/review papers
+- theory/foundation papers
+- benchmark/evaluation papers
+- primary research papers
 
-**Key Characteristics:**
-- Operate directly on image/video data
-- Leverage powerful video generation architectures (diffusion models, transformers, GANs)
-- Natural for camera-based perception systems
-- High-dimensional representations
+The following do **not** belong in `Research`:
+- talks and presentations
+- tutorials and courses
+- datasets
+- tools, libraries, and simulators
+- workshops and challenges
+- research groups and labs
+- forums, newsletters, Discord/Slack communities, and other community links
 
-**Technical Approaches:**
-- **Diffusion Models**: Stable Diffusion, DiT-based video generation
-- **Autoregressive Models**: GPT-style next-frame prediction
-- **Latent Video Models**: VAE-based compression + generation
+Those items belong in the dedicated `Learning Resources`, `Practical Resources`, and `Community` sections.
 
-**Advantages:**
-- Rich visual detail and realism
-- Leverages pre-trained vision models
-- Natural for end-to-end learning
+### One canonical home per paper
 
-**Challenges:**
-- Computational cost
-- Difficulty in explicit 3D reasoning
-- Evaluation metrics (FVD, LPIPS)
+Every retained paper must appear in exactly one canonical place in `Research`.
 
-**Representative Papers:**
-- Genie (DeepMind)
-- GAIA-1 (Wayve)
-- DriveDreamer series
-- MagicDrive series
+Do **not** list the same paper under both a paradigm section and a domain section. Do **not** duplicate a paper because it fits multiple settings.
 
 ---
 
-### 🧊 OccGen: Occupancy-based World Models
+## 2. Canonical paper map
 
-**Definition**: World models that represent the environment using 3D occupancy grids or fields.
+All papers in `Research` must be placed in one of these sections:
 
-**Key Characteristics:**
-- Explicit 3D spatial structure
-- Voxel grids or continuous occupancy fields
-- Efficient for 3D reasoning and planning
-- Compact representation
+1. `Surveys & Reviews`
+2. `Theory & Foundations`
+3. `Benchmarks & Evaluation`
+4. `Primary Research by Domain`
+   - `General / Foundational`
+   - `Autonomous Driving`
+   - `Embodied AI & Robotics`
+   - `Interactive Digital Environments`
+   - `Social / Multi-Agent`
+   - `Scientific World Models`
 
-**Technical Approaches:**
-- **Voxel-based**: Discrete 3D grids with occupancy probabilities
-- **NeRF-based**: Neural radiance fields for continuous representation
-- **Gaussian Splatting**: 3D Gaussians for efficient rendering
-- **Hybrid**: Combining occupancy with other modalities
-
-**Advantages:**
-- Explicit 3D structure
-- Efficient collision detection
-- Natural for planning algorithms
-- Interpretable representations
-
-**Challenges:**
-- Resolution vs. memory trade-offs
-- Limited visual detail
-- Sensor-specific (often requires LiDAR)
-
-**Representative Papers:**
-- OccWorld
-- GaussianWorld
-- UniScene
-- Drive-OccWorld
+This is the only canonical paper map used by the repository.
 
 ---
 
-### 📡 LiDARGen: LiDAR-based World Models
+## 3. Required classification fields
 
-**Definition**: World models that directly generate and predict LiDAR point clouds.
+Each paper entry should be classified using these fields:
 
-**Key Characteristics:**
-- Operate on 3D point cloud data
-- Preserve geometric precision
-- Sensor-specific modeling
-- Sparse representations
+- `paper_type`
+- `primary_domain`
+- `primary_paradigm`
+- `secondary_tags` (optional)
 
-**Technical Approaches:**
-- **Point-based**: Direct point cloud generation
-- **Range-based**: LiDAR range image prediction
-- **Hybrid**: Combining points with other representations
+### Requiredness
 
-**Advantages:**
-- Geometric accuracy
-- Natural for LiDAR-equipped systems
-- Efficient for 3D tasks
-- Less ambiguity than images
+- `paper_type` is required for **every** paper.
+- `primary_domain` is required for **Primary Research** papers.
+- `primary_paradigm` is required for **Primary Research** papers.
+- `secondary_tags` are optional.
 
-**Challenges:**
-- Limited to LiDAR-equipped platforms
-- Sparse data
-- Difficulty in modeling appearance
-
-**Representative Papers:**
-- LiDARGen
-- DynamicCity
-- LiSTAR
-- LiDARCrafter
+For `Survey/Review`, `Theory/Foundations`, and `Benchmark/Evaluation`, `primary_domain` and `primary_paradigm` may be omitted when the work is intentionally cross-domain or cross-paradigm. Do not force a fake single paradigm onto a broad survey or theory paper.
 
 ---
 
-## Dimension 2: Application Domains
+## 4. Allowed paper types
 
-### 🚗 Autonomous Driving
+### 4.1 Survey/Review
 
-**Scope**: World models for self-driving vehicles, including scene prediction, planning, and simulation.
+Use `Survey/Review` when the paper's main contribution is synthesis rather than a new world-model method.
 
-**Key Tasks:**
-- Future scene prediction
-- Trajectory planning
-- Safety-critical scenario generation
-- Sensor simulation
+Typical signals:
+- survey
+- review
+- taxonomy
+- landscape/outlook
+- comprehensive overview
 
-**Unique Challenges:**
-- Safety requirements
-- Real-time constraints
-- Multi-agent interactions
-- Long-tail scenarios
+Examples:
+- surveys of world models for autonomous driving
+- surveys of embodied world models
+- broad 3D/4D world modeling surveys
 
-**Data Sources:**
-- nuScenes, Waymo Open, KITTI
-- Multi-modal sensors (camera, LiDAR, radar)
+### 4.2 Theory/Foundations
 
----
+Use `Theory/Foundations` when the main contribution is conceptual, analytical, or foundational.
 
-### 🤖 Embodied AI & Robotics
+Typical signals:
+- theoretical framing of world models
+- representation/inductive-bias analysis
+- interpretability or mechanistic understanding
+- formal arguments about what makes a world model work
 
-**Scope**: World models for physical agents that manipulate and navigate in 3D environments.
+Examples:
+- papers on physical grounding
+- papers analyzing learned world models in transformers
+- foundational agenda-setting papers
 
-**Key Tasks:**
-- Manipulation planning
-- Navigation
-- Object interaction
-- Sim-to-real transfer
+### 4.3 Benchmark/Evaluation
 
-**Unique Challenges:**
-- Physical constraints
-- Contact dynamics
-- Generalization to new objects
-- Sample efficiency
+Use `Benchmark/Evaluation` when the main contribution is evaluating, stress-testing, or standardizing comparison of world models.
 
-**Data Sources:**
-- CALVIN, RoboNet, RT-1
-- Simulation environments (Isaac Sim, MuJoCo)
+Typical signals:
+- benchmark suite
+- leaderboard
+- evaluation protocol
+- metric paper
+- diagnostic testbed
+- data engine or scenario suite whose main purpose is assessment
 
----
+Examples:
+- world-model benchmark papers
+- evaluation metric papers
+- systematic reliability or robustness test suites
 
-### 🎮 Game Simulation & XR
+### 4.4 Primary Research
 
-**Scope**: World models for procedural content generation, game AI, and interactive experiences.
+Use `Primary Research` when the paper's main contribution is a new model, algorithm, training recipe, system, or integrated method.
 
-**Key Tasks:**
-- Procedural generation
-- NPC behavior modeling
-- Interactive simulation
-- Content creation
+Typical signals:
+- introduces a new world model architecture
+- proposes a new planning/training pipeline
+- introduces a new generative simulation/control method
+- presents a new action-conditioned world-model system
 
-**Unique Challenges:**
-- Creativity and diversity
-- User interaction
-- Real-time generation
-- Controllability
-
-**Data Sources:**
-- Minecraft, Atari, game engines
-- Synthetic environments
+Most papers in the repository will fall into this class.
 
 ---
 
-### 🔬 Scientific Applications
+## 5. Allowed primary domains
 
-**Scope**: World models for scientific simulation and discovery.
+Only use the following `primary_domain` values for `Primary Research` papers.
 
-**Key Tasks:**
-- Physics simulation
-- Molecular dynamics
-- Climate modeling
-- Material science
+### 5.1 General / Foundational
 
-**Unique Challenges:**
-- Physical accuracy
-- Long-term prediction
-- Multi-scale modeling
-- Interpretability
+Use when the paper is not anchored to a single downstream domain and is best read as a general world-model contribution.
 
----
+Use this when:
+- the paper is explicitly domain-agnostic
+- the core claim is broad and foundational
+- experiments span multiple settings without one clear target application
+- the work is mainly about a reusable world-model capability
 
-## Cross-Cutting Themes
+Do **not** use this just because a paper feels important. If the work is clearly aimed at driving, robotics, web agents, or science, use that domain instead.
 
-### Multi-Modal World Models
+### 5.2 Autonomous Driving
 
-Many modern world models combine multiple paradigms:
-- **Video + Occupancy**: DriveDreamer4D, UniScene
-- **LiDAR + Camera**: Multi-modal fusion approaches
-- **Language + Vision**: VLM-based world models
+Use when the core evaluation setting or claimed target use case is self-driving.
 
-### Hierarchical Representations
+Includes:
+- future scene prediction for driving
+- driving simulation
+- planning for autonomous vehicles
+- occupancy or sensor generation for driving stacks
+- AD safety and long-tail scenario generation
 
-World models often use hierarchical structures:
-- **Spatial**: Local to global representations
-- **Temporal**: Short-term to long-term prediction
-- **Semantic**: Low-level to high-level abstractions
+### 5.3 Embodied AI & Robotics
 
-### Foundation Models
+Use when the core target is a physical agent acting in the world.
 
-Emerging trend of large-scale pre-trained world models:
-- **NVIDIA Cosmos**: Universal world foundation model
-- **Genie**: Generative interactive environments
-- **GAIA**: Generative AI for autonomous driving
+Includes:
+- manipulation
+- navigation
+- locomotion
+- mobile manipulation
+- robotic planning and control
+- VLA systems for robots
+- sim-to-real robot learning
 
----
+### 5.4 Interactive Digital Environments
 
-## Classification Guidelines
+Use when the paper is about interactive virtual environments rather than physical robots or real vehicles.
 
-### How to Categorize a Paper
+Includes:
+- games
+- game engines
+- Minecraft and Atari environments
+- XR and virtual environments
+- browser/web-agent environments
+- computer-use or software-interaction worlds
 
-1. **Identify the primary representation paradigm**:
-   - Does it generate videos/images? → VideoGen
-   - Does it use 3D occupancy? → OccGen
-   - Does it generate LiDAR? → LiDARGen
+This is the canonical home for papers that might otherwise be split between game simulation and web agents.
 
-2. **Identify the application domain**:
-   - Is it for self-driving? → Autonomous Driving
-   - Is it for robots? → Embodied AI & Robotics
-   - Is it for games? → Game Simulation
-   - Is it for science? → Scientific Applications
+### 5.5 Social / Multi-Agent
 
-3. **Handle edge cases**:
-   - Papers can belong to multiple categories
-   - General/foundational papers may not fit specific domains
-   - Surveys and reviews are categorized separately
+Use when the core target is modeling social interaction, human behavior, or multi-agent dynamics.
 
-### Examples
+Includes:
+- multi-agent coordination
+- social navigation
+- pedestrian/human behavior modeling
+- theory-of-mind-style simulation
+- social world-model environments
 
-- **DriveDreamer**: VideoGen + Autonomous Driving
-- **OccWorld**: OccGen + Autonomous Driving
-- **Genie**: VideoGen + Game Simulation
-- **DreamerV3**: General (model-based RL, multiple domains)
+### 5.6 Scientific World Models
 
----
+Use when the core target is scientific simulation or scientific discovery.
 
-## Evolution of the Taxonomy
-
-This taxonomy is designed to be:
-- **Extensible**: New paradigms and domains can be added
-- **Flexible**: Papers can belong to multiple categories
-- **Practical**: Helps users find relevant work quickly
-
-As the field evolves, we may introduce:
-- New representation paradigms (e.g., language-based, audio-based)
-- New application domains (e.g., healthcare, education)
-- Finer-grained subcategories
+Includes:
+- physics simulation
+- biology and medicine
+- chemistry and molecules
+- climate and earth systems
+- scientific forecasting or experiment design
 
 ---
 
-## References
+## 6. Allowed primary paradigms
 
-This taxonomy is informed by:
-- [3D and 4D World Modeling: A Survey](https://arxiv.org/abs/2509.07996)
-- [The Role of World Models in Shaping Autonomous Driving](https://arxiv.org/abs/2502.10498)
-- [A Comprehensive Survey on World Models for Embodied AI](https://arxiv.org/abs/2510.16732)
+Only use the following `primary_paradigm` values for `Primary Research` papers.
+
+### 6.1 Video-based
+
+Use when the main predicted world state is image/video space or a video-generation latent tied directly to rendered frames.
+
+Typical signals:
+- next-frame / future video prediction
+- diffusion or autoregressive video generation
+- visually rendered rollout is the central output
+
+### 6.2 3D Occupancy / 3D Scene
+
+Use when the main predicted state is an explicit 3D scene representation.
+
+Includes:
+- occupancy grids
+- voxel fields
+- Gaussian splatting scene models
+- NeRF-style scene rollouts
+- explicit structured 3D world states
+
+### 6.3 LiDAR / Point Cloud
+
+Use when the main predicted state is LiDAR, range images, or point clouds.
+
+### 6.4 Latent-State / Tokenized
+
+Use when the main predicted state is a latent or tokenized internal state rather than explicit video, occupancy, or LiDAR output.
+
+Typical signals:
+- latent dynamics models
+- token-based world models
+- JEPA-style latent prediction
+- sequence models over learned world tokens
+
+### 6.5 Multimodal / World Foundation
+
+Use when the paper's main contribution is a unified world model across multiple modalities and no single explicit state representation clearly dominates.
+
+Typical signals:
+- world foundation model framing
+- joint modeling across multiple modalities/tasks
+- one model intended to serve many observation and action interfaces
+
+Do **not** use this just because the paper consumes multiple inputs. If one predicted state representation is clearly primary, use that representation instead.
+
+### 6.6 Action-Conditioned / Policy-Centric
+
+Use when the world-model contribution is tightly centered on control, decision-making, or policy learning, and the action-conditioned decision loop is the main novelty.
+
+Typical signals:
+- planning or RL is the core contribution
+- the paper is best understood as a world model for action selection
+- prediction exists mainly to support policy improvement or control
+
+Do **not** use this for every paper that takes actions as input. If the main novelty is still video, 3D scene, or latent prediction, use that representation and add a task tag such as `planning/RL`.
 
 ---
 
-**Last Updated**: March 2026
+## 7. Secondary tags
+
+`secondary_tags` are optional. They help describe setting, task, or emphasis, but they do **not** determine canonical placement.
+
+Recommended tags include:
+- `VLA`
+- `manipulation`
+- `navigation`
+- `locomotion`
+- `planning/RL`
+- `web-agent`
+- `simulation`
+- `safety`
+- `sim-to-real`
+- `language-conditioned`
+- `multi-agent`
+- `human-behavior`
+- `physics`
+- `biology`
+- `medicine`
+
+Rules:
+- Use tags sparingly.
+- Prefer 0-3 tags per paper.
+- Tags are descriptive, not hierarchical.
+- Tags never create new canonical sections.
+
+In particular, `VLA`, `navigation`, `locomotion`, `web-agent`, and `planning/RL` are **tags**, not top-level paper categories.
+
+---
+
+## 8. Tie-break rules
+
+### 8.1 Choose `paper_type` by dominant contribution
+
+Use the paper for what it is mainly trying to contribute.
+
+Priority guidance:
+1. If the paper mainly synthesizes prior work, use `Survey/Review`.
+2. If it mainly defines evaluation, metrics, or benchmarking infrastructure, use `Benchmark/Evaluation`.
+3. If it mainly advances conceptual or theoretical understanding, use `Theory/Foundations`.
+4. Otherwise, use `Primary Research`.
+
+### 8.2 Choose `primary_domain` by core evaluation setting
+
+For `Primary Research`, choose domain by the paper's main target use case and evaluation setting.
+
+Ask:
+- Where is the method primarily tested?
+- What deployment setting does the abstract claim?
+- What users or agents is the paper actually trying to help?
+
+Examples:
+- a robot manipulation paper with VLA framing still belongs in `Embodied AI & Robotics`
+- a browser-agent world model belongs in `Interactive Digital Environments`
+- a social navigation paper belongs in `Social / Multi-Agent` only if social interaction is the central claim, not merely a detail of robot evaluation
+
+### 8.3 Choose `primary_paradigm` by predicted state representation
+
+Choose paradigm by what the model mainly rolls out or predicts, not by every input/output it touches.
+
+Examples:
+- camera input + occupancy rollout -> `3D Occupancy / 3D Scene`
+- multimodal input + latent rollout -> `Latent-State / Tokenized`
+- action-conditioned video prediction for driving -> `Video-based`
+
+### 8.4 VLA is not a domain
+
+Vision-language-action is a model setting, not a canonical domain.
+
+- robot VLA papers -> `Embodied AI & Robotics` + tag `VLA`
+- web-agent VLA-like papers -> `Interactive Digital Environments` + tag `web-agent`
+
+### 8.5 Planning/RL is not a domain
+
+Planning and RL are task emphases.
+
+- driving planning papers stay in `Autonomous Driving`
+- robot policy-learning papers stay in `Embodied AI & Robotics`
+- use `planning/RL` as a tag when helpful
+
+### 8.6 Web-agent papers belong with digital environments
+
+Do not split web-agent papers into ad hoc sections. Their canonical home is `Interactive Digital Environments`.
+
+### 8.7 Social papers must be socially central
+
+Use `Social / Multi-Agent` only when social or multi-agent interaction is the paper's main object of modeling. If a driving or robotics paper merely contains other agents, that alone is not enough.
+
+### 8.8 Scientific papers must be scientifically central
+
+Use `Scientific World Models` only when the scientific domain is the actual target use case. A general method evaluated on one science dataset does not automatically move there.
+
+### 8.9 Non-paper resources never stay in `Research`
+
+If an item is a workshop, challenge, blog post, course, dataset page, tool, library, or research group, move it out of `Research` even if it is useful.
+
+---
+
+## 9. Duplicate policy
+
+### 9.1 No duplicate canonical entries
+
+A paper may appear only once in canonical `Research`.
+
+### 9.2 No duplicate arXiv IDs
+
+If two entries share the same arXiv ID, they should usually be treated as the same paper unless there is a clear reason otherwise.
+
+### 9.3 No duplicate titles for the same underlying work
+
+If a published version and arXiv version refer to the same paper, keep one canonical entry.
+
+Preferred handling:
+- keep the most stable public title
+- keep the strongest venue label available
+- keep arXiv/code/website links together in the same row when available
+
+### 9.4 Distinct sequels are allowed
+
+Series such as `DriveDreamer` and `DriveDreamer-2` are separate papers when they are genuinely distinct works.
+
+---
+
+## 10. Submission checklist
+
+Before adding a paper, confirm all of the following:
+
+- it is actually a paper, not only a project page or workshop
+- it fits the repository scope
+- `paper_type` is selected
+- if `Primary Research`, `primary_domain` is selected
+- if `Primary Research`, `primary_paradigm` is selected
+- optional tags are used only when they add clarity
+- the paper does not duplicate an existing title or arXiv ID
+- the paper has exactly one canonical home in `Research`
+- links are valid
+
+---
+
+## 11. Worked examples
+
+| Paper | paper_type | primary_domain | primary_paradigm | secondary_tags |
+|------|------------|----------------|------------------|----------------|
+| DriveDreamer | Primary Research | Autonomous Driving | Video-based | simulation |
+| OccWorld | Primary Research | Autonomous Driving | 3D Occupancy / 3D Scene | planning/RL |
+| Genie | Primary Research | Interactive Digital Environments | Video-based | simulation |
+| DreamerV3 | Primary Research | General / Foundational | Action-Conditioned / Policy-Centric | planning/RL |
+| Web World Models | Primary Research | Interactive Digital Environments | Video-based or Multimodal / World Foundation, depending on the paper's main rollout target | web-agent |
+| WorldLens | Benchmark/Evaluation | optional | optional | safety |
+| A Survey of Embodied World Models | Survey/Review | optional | optional | |
+| Inductive Biases Guide Learned World Models in Transformers | Theory/Foundations | optional | optional | |
+
+When a case is ambiguous, prefer the most defensible single interpretation and document that choice consistently.
+
+---
+
+## 12. Maintainer note
+
+This taxonomy is intentionally strict:
+- one paper, one canonical home
+- one dominant paper type
+- one primary domain for primary research
+- one primary paradigm for primary research
+
+Strictness is what allows outside contributors to classify papers consistently without creating overlapping sections over time.
+
+---
+
+**Last Updated**: April 7, 2026

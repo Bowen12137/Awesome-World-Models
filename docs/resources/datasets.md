@@ -1,6 +1,8 @@
 # Datasets for World Models
 
-Comprehensive list of datasets used in world models research, organized by application domain.
+Curated datasets for world models research, organized by application domain.
+
+> For evaluation suites and metrics, see [benchmarks.md](benchmarks.md).
 
 ---
 
@@ -83,17 +85,7 @@ Comprehensive list of datasets used in world models research, organized by appli
 
 ---
 
-## 📊 Benchmark Suites
-
-| Benchmark | Datasets Included | Focus | Resources |
-|-----------|-------------------|-------|-----------|
-| **WorldLens** | Multiple driving datasets | Comprehensive world model evaluation | [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg)](https://arxiv.org/abs/2512.10958) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://worldbench.github.io/worldlens) |
-| **WorldScore** | Custom scenarios | World model quality metrics | [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg)](https://arxiv.org/abs/2406.09406) |
-| **VBench** | Video generation | Video quality evaluation | [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg)](https://arxiv.org/abs/2311.17982) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/Vchitect/VBench) |
-
----
-
-## 🔗 Dataset Collections & Resources
+## 🔗 Dataset Collections
 
 - **[Awesome Autonomous Driving Datasets](https://github.com/autonomousvision/awesome-autonomous-driving-datasets)** - Curated list of AD datasets
 - **[Robotics Datasets](https://github.com/mint-lab/awesome-robotics-datasets)** - Collection of robotics datasets
@@ -102,27 +94,4 @@ Comprehensive list of datasets used in world models research, organized by appli
 
 ---
 
-## 📝 Dataset Selection Guide
-
-### For Autonomous Driving Research
-- **Start with**: nuScenes (multi-modal), Waymo (large-scale)
-- **For occupancy**: Occ3D, OpenOccupancy
-- **For planning**: nuPlan, NAVSIM
-
-### For Embodied AI Research
-- **Start with**: CALVIN (language-conditioned), RoboCasa (kitchen tasks)
-- **For multi-robot**: Open X-Embodiment
-- **For navigation**: Habitat-Matterport 3D
-
-### For Game AI Research
-- **Start with**: Atari 2600 (classic RL), MineRL (open-world)
-- **For procedural**: Minecraft
-
----
-
-**Last Updated**: March 6, 2026
-
-Sources:
-- [Top Autonomous Driving Datasets](https://www.hulela.co.za/blog/the-top-5-autonomous-driving-datasets-6bmlng)
-- [CALVIN Benchmark](https://github.com/mees/calvin)
-- [Embodied AI Survey](https://arxiv.org/html/2505.01458)
+**Last Updated**: April 2026
