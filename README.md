@@ -128,6 +128,7 @@ Comprehensive surveys and review papers on world models:
 
 | Paper | Venue | Resources |
 |-------|-------|-----------|
+| **Safety in Embodied AI: A Survey of Risks, Attacks, and Defenses** | `arXiv 26.05` | [![arXiv](https://img.shields.io/badge/arXiv-2605.02900-b31b1b.svg)](https://arxiv.org/abs/2605.02900) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/x-zheng16/Awesome-Embodied-AI-Safety) |
 | ⭐ **The Role of World Models in Shaping Autonomous Driving: A Comprehensive Survey** | `arXiv 25.02` | [![arXiv](https://img.shields.io/badge/arXiv-2502.10498-b31b1b.svg)](https://arxiv.org/abs/2502.10498) |
 | **Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI** | `TMECH 25` | [![arXiv](https://img.shields.io/badge/arXiv-2407.06886-b31b1b.svg)](https://arxiv.org/abs/2407.06886) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/HCPLab-SYSU/Embodied_AI_Paper_List) |
 | **3D and 4D World Modeling: A Survey** | `arXiv 25.09` | [![arXiv](https://img.shields.io/badge/arXiv-2509.07996-b31b1b.svg)](https://arxiv.org/abs/2509.07996) |
