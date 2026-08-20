@@ -177,6 +177,7 @@ Primary research papers whose core contribution is broadly reusable across domai
 
 | Paper | Venue | Resources |
 |-------|-------|-----------|
+| **Partition the Support, Reconstruct the Residual: Training-Free Sparse Attention for Video Generation and World Models** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2608.18484-b31b1b.svg)](https://arxiv.org/abs/2608.18484) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/PardisTaghavi/SparsePR) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://pardistaghavi.github.io/SparsePR-website/) |
 | ⭐ **Agent Learning via Early Experience** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2510.08558-b31b1b.svg)](https://arxiv.org/pdf/2510.08558) |
 | ⭐ **General agents Contain World Models** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2506.01622-b31b1b.svg)](https://arxiv.org/abs/2506.01622) |
 | ⭐ **Persistent Embodied World Models** | `-` | [![arXiv](https://img.shields.io/badge/arXiv-2505.05495-b31b1b.svg)](https://arxiv.org/abs/2505.05495) |
