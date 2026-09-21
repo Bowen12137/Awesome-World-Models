@@ -197,6 +197,7 @@ World models for scene prediction, planning, simulation, and control in self-dri
 
 | Paper | Venue | Resources |
 |-------|-------|-----------|
+| **DriveVA: Video Action Models are Zero-Shot Drivers** | `ECCV 2026` | [![Paper](https://img.shields.io/badge/Paper-ECCV_2026-b31b1b.svg)](https://link.springer.com/chapter/10.1007/978-3-032-37718-0_19) [![Code](https://img.shields.io/badge/Code-GitHub-green)](https://github.com/xiaomi-mlab/DriveVA) |
 | ⭐ **LaST-VLA: Latent Spatio-Temporal VLA for Autonomous Driving** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2603.01928-b31b1b.svg)](https://arxiv.org/abs/2603.01928) |
 | ⭐ **Hyper Diffusion Planner: End-to-End Autonomous Driving with Real-Vehicle Deployment** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2602.22801-b31b1b.svg)](https://arxiv.org/abs/2602.22801) |
 | ⭐ **ResWorld: Temporal Residual World Model for Dynamic Object Modeling** | `arXiv 2026` | [![arXiv](https://img.shields.io/badge/arXiv-2602.10884-b31b1b.svg)](https://arxiv.org/abs/2602.10884) |
